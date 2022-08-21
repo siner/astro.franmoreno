@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { ArenguForm } from "react-arengu-forms";
+import Devicon from "../components/elements/devicon";
+
+const skills = [
+  { name: "php", stars: 4 },
+  { name: "mysql", stars: 4 },
+  { name: "html5", stars: 5 },
+  { name: "css3", stars: 4 },
+  { name: "wordpress", stars: 5 },
+  { name: "nodejs", stars: 3 },
+  { name: "react", stars: 4 },
+  { name: "nextjs", stars: 4 },
+  { name: "vuejs", stars: 3 },
+  { name: "nuxtjs", stars: 3 },
+  { name: "git", stars: 4 },
+  { name: "bash", stars: 4 },
+  { name: "digitalocean", stars: 3 },
+  { name: "figma", stars: 3 },
+];
+---
+
+<Layout title="Fran Moreno">
+  <div class="md:flex text-center md:text-left items-center container mx-auto">
+    <div class="p-4 mt-10 md:mt-0 md:w-2/3">
+      <h2 class="text-xl font-bold mb-5">Front-end Developer</h2>
+      <p>Computer Engineer with more than 15 years working as Web Developer</p>
+      <p>
+        Cofounder of Sozpic, CTO on AltaMK and trying to learn and help as much
+        as possible
+      </p>
+    </div>
+    <div class="flex-1 p-5 md:pt-20">
+      <ArenguForm id={import.meta.env.SECRET_ARENGU_ID} client:load />
+    </div>
+  </div>
+
+  <div class="container mx-auto skills text-center">
+    <h2 class="text-xl font-bold mb-5">Skills</h2>
+
+    <div
+      class="grid grid-cols-5 gap-5 justify-items-center justify-content-center"
+    >
+      {
+        skills.map((skill) => (
+          <Devicon
+            name={`devicon-${skill.name}-plain`}
+            stars={skill.stars}
+            client:load
+          />
+        ))
+      }
+    </div>
+  </div>
+</Layout>
+
+<style>
+
+</style>

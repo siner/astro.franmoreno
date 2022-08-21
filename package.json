@@ -1,0 +1,27 @@
+{
+  "name": "@example/basics",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "preview-cloudflare": "wrangler pages dev ./dist",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "@astrojs/cloudflare": "^1.0.1",
+    "@astrojs/react": "^1.0.0",
+    "@astrojs/tailwind": "^1.0.0",
+    "astro": "^1.0.6",
+    "prettier-plugin-astro": "^0.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "wrangler": "^2.0.26"
+  },
+  "dependencies": {
+    "framer-motion": "^7.2.0",
+    "react-arengu-forms": "^1.0.4"
+  }
+}
