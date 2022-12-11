@@ -31,11 +31,32 @@ import '../styles/globals.css'
     <title>{title}</title>
     <meta name="description" content={description} />
   </head>
-  <body>
+  <body class="dark:bg-[#333333] dark:text-[#f5f5f5]">
     <Header />
     <div class="mx-4">
       <slot />
     </div>
     <Footer />
+    <script is:inline>
+      const theme = (() => {
+        if (
+          typeof localStorage !== 'undefined' &&
+          localStorage.getItem('theme')
+        ) {
+          return localStorage.getItem('theme')
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark'
+        }
+        return 'light'
+      })()
+
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark')
+      } else {
+        document.documentElement.classList.add('dark')
+      }
+      window.localStorage.setItem('theme', theme)
+    </script>
   </body>
 </html>

@@ -2,9 +2,7 @@
 export interface Props {
   title: string
 }
-
-import Header from '../components/header.astro'
-import Footer from '../components/footer.astro'
+import Layout from './Layout.astro'
 
 import '../styles/globals.css'
 
@@ -13,38 +11,14 @@ const {
 } = Astro.props
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <script async src="https://sdk.arengu.com/forms.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
-    />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-  </head>
-  <body>
-    <Header />
-    <main class="container mx-4">
-      <article class="mt-10">
-        <div class="mx-auto prose lg:prose-xl dark:prose-invert">
-          <h1>{title}</h1>
-          {image && <img src={'/blog/' + image} alt="" />}
-          {pubDate && <time>🗓️ {pubDate}</time>}
-          <hr />
-          <slot />
-        </div>
-      </article>
-    </main>
-
-    <Footer />
-  </body>
-</html>
+<Layout title={title} description={description}>
+  <article class="mt-10">
+    <div class="mx-auto prose lg:prose-xl dark:prose-invert">
+      <h1>{title}</h1>
+      {image && <img src={'/blog/' + image} alt="" />}
+      {pubDate && <time>🗓️ {pubDate}</time>}
+      <hr />
+      <slot />
+    </div>
+  </article>
+</Layout>

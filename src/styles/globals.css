@@ -9,33 +9,9 @@
   position: relative;
 }
 
-:root {
-  --black: #333333;
-  --white: #f5f5f5;
-  --backround: var(--white);
-  --foreground: var(--black);
-  --transition: 0.5s ease;
-}
-
 html {
-  background: var(--white);
-  color: var(--foreground);
-  transition: color var(--transition);
-}
-
-html::before {
-  content: '';
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background: var(--black);
-  transform: translateX(-100%);
-  transition: transform var(--transition);
-  z-index: 0;
-}
-
-.dark::before {
-  transform: translateX(0);
+  background: #f5f5f5;
+  color: #333333;
 }
 
 .hidden {
@@ -57,12 +33,15 @@ html::before {
 .toggle {
   height: 32px;
   width: 60px;
-  background: var(--foreground);
+  background: #333333;
   border-radius: 40px;
   padding: 6px;
   position: relative;
-  transition: background var(--transition);
   cursor: pointer;
+}
+
+.dark .toggle {
+  background-color: #f5f5f5;
 }
 
 .toggle::before {
@@ -71,13 +50,15 @@ html::before {
   height: 24px;
   width: 24px;
   border-radius: 20px;
-  background: var(--background);
+  background: #f5f5f5;
   position: absolute;
   z-index: 2;
   top: 4px;
   left: 4px;
-  transform: translate(0);
-  transition: transform var(--transition), background var(--transition);
+}
+
+.dark .toggle::before {
+  background-color: #333333;
 }
 
 .toggle.enabled::before {
@@ -99,10 +80,14 @@ html::before {
 }
 
 .toggle .icons svg {
-  fill: var(--background);
+  fill: #f5f5f5;
   height: 15px;
   width: 15px;
   z-index: 0;
+}
+
+.dark .toggle .icons svg {
+  fill: #333333;
 }
 
 .skills i.devicon {
@@ -120,12 +105,12 @@ footer i {
 
 .af-step-next button:hover {
   color: #333 !important;
-  background-color: #fff !important;
+  background-color: #f5f5f5 !important;
 }
 
 .dark .af-step-next button {
   color: #333 !important;
-  background-color: #fff !important;
+  background-color: #f5f5f5 !important;
 }
 
 .dark .af-step-next button:hover {
