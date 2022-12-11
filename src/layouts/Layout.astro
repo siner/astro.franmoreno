@@ -1,9 +1,10 @@
 ---
 export interface Props {
   title: string
+  description: string
 }
 
-const { title } = Astro.props as Props
+const { title, description } = Astro.props as Props
 
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
@@ -30,6 +31,7 @@ import '../styles/globals.css'
       href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
     />
     <title>{title}</title>
+    <meta name="description" content={description} />
   </head>
   <body>
     <Header />

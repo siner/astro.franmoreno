@@ -137,3 +137,7 @@ footer i {
     font-size: 3rem;
   }
 }
+
+.af-branding {
+  display: none !important;
+}
