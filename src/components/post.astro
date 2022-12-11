@@ -7,7 +7,7 @@ const { title, img, url, date } = Astro.props
     <img src={img} alt={title} />
   </a>
   <div class="px-6 py-4">
-    <p class="mb-2"><small>{date}</small></p>
+    <p class="mb-2">🗓️ <time><small>{date}</small></time></p>
     <a href={url} class="font-bold mb-2">
       {title}
     </a>

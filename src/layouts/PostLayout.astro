@@ -9,7 +9,7 @@ import Footer from '../components/footer.astro'
 import '../styles/globals.css'
 
 const {
-  frontmatter: { title, description, pubDate, image, author },
+  frontmatter: { title, description, pubDate, image, author }
 } = Astro.props
 ---
 
@@ -36,9 +36,9 @@ const {
     <main class="container mx-auto">
       <article class="mt-10">
         <div class="mx-auto prose lg:prose-xl dark:prose-invert">
-          <h1 class="">{title}</h1>
-          {image && <img src={image} alt="" />}
-          Published on: {pubDate && <time>{pubDate}</time>}
+          <h1>{title}</h1>
+          {image && <img src={'/blog/' + image} alt="" />}
+          {pubDate && <time>🗓️ {pubDate}</time>}
           <hr />
           <slot />
         </div>

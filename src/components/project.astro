@@ -11,10 +11,21 @@ import Button from './elements/button.astro'
     <slot />
   </div>
   <div class="flex gap-2">
-    {url && <Button url={url}>Ver web</Button>}
-    <Button url={github}>
-      <i class="devicon-github-original"></i>
-      Github
-    </Button>
+    {
+      url && (
+        <Button url={url}>
+          <i class="devicon-chrome-plain" />
+          Ver web
+        </Button>
+      )
+    }
+    {
+      github && (
+        <Button url={github}>
+          <i class="devicon-github-plain" />
+          Github
+        </Button>
+      )
+    }
   </div>
 </div>
