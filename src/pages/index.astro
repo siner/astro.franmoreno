@@ -1,96 +1,148 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { ArenguForm } from "react-arengu-forms";
-import Devicon from "../components/elements/devicon";
+import Layout from '../layouts/Layout.astro'
+import Project from '../components/project.astro'
+import { ArenguForm } from 'react-arengu-forms'
+import Post from '../components/post.astro'
+
+const posts = await Astro.glob('../pages/blog/**/*.mdx')
+posts.sort(
+  (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
+)
 
 const skills = [
-  { name: "php", stars: 4 },
-  { name: "mysql", stars: 4 },
-  { name: "html5", stars: 5 },
-  { name: "css3", stars: 4 },
-  { name: "wordpress", stars: 5 },
-  { name: "nodejs", stars: 3 },
-  { name: "react", stars: 4 },
-  { name: "nextjs", stars: 4 },
-  { name: "vuejs", stars: 3 },
-  { name: "nuxtjs", stars: 3 },
-  { name: "git", stars: 4 },
-  { name: "bash", stars: 4 },
-  { name: "digitalocean", stars: 3 },
-  { name: "figma", stars: 3 },
-];
+  { name: 'php', stars: 4 },
+  { name: 'mysql', stars: 4 },
+  { name: 'html5', stars: 5 },
+  { name: 'css3', stars: 4 },
+  { name: 'wordpress', stars: 5 },
+  { name: 'nodejs', stars: 3 },
+  { name: 'react', stars: 4 },
+  { name: 'nextjs', stars: 4 },
+  { name: 'vuejs', stars: 3 },
+  { name: 'nuxtjs', stars: 3 },
+  { name: 'git', stars: 4 },
+  { name: 'bash', stars: 4 },
+  { name: 'digitalocean', stars: 3 },
+  { name: 'figma', stars: 3 }
+]
 ---
 
 <Layout title="Fran Moreno">
-  <div class="md:flex text-center md:text-left items-center container mx-auto">
-    <div class="p-4 mt-10 md:mt-0 md:w-2/3">
-      <h1 class="text-4xl font-bold mb-5">Front-end Developer</h1>
-      <p>Computer Engineer with more than 15 years working as Web Developer</p>
+  <div class="md:flex items-center container mx-auto gap-10">
+    <div class="mt-10 md:mt-0 md:w-2/3 space-y-4">
+      <h1 class="text-4xl font-bold mb-5">Hola 👋🏽</h1>
       <p>
-        Cofounder of Sozpic, CTO on AltaMK and trying to learn and help as much
-        as possible
+        Soy <strong>Fran Moreno</strong>, Ingeniero informático con más de 15
+        años de experiencia como <strong>Desarrollador Web</strong>. Actualmente
+        centrado sobre todo en el desarrollo Frontend con <strong>React</strong>
+        (Astro y NextJS).
+      </p>
+      <ul class="list-disc ml-10">
+        <li>
+          Cofundador de la empresa <a
+            class="underline"
+            target="_blank"
+            href="https://www.sozpic.com"
+            >Sozpic
+          </a>
+        </li>
+        <li>
+          CTO en <a
+            class="underline"
+            href="https://www.altamk.com"
+            target="_blank"
+            >AltaMK
+          </a>
+        </li>
+        <li>
+          Ex podcaster en <a
+            class="underline"
+            href="https://www.necesitounarma.com"
+            target="_blank"
+            >Necesito un Arma
+          </a>
+        </li>
+      </ul>
+      <p>
+        En esta web puedes encontrar mis últimos artículos y proyectos. Si
+        quieres contactar conmigo solo tienes que rellenar el siguiente
+        formulario.
       </p>
     </div>
-    <div class="flex-1 p-5 md:pt-20">
+    <div class="flex-1 mt-5 md:pt-20">
       <ArenguForm id={import.meta.env.SECRET_ARENGU_ID} client:load />
     </div>
   </div>
 
-  <div class="container mx-auto skills text-center">
-    <h2 class="text-4xl font-bold mb-5">Personal Projects</h2>
-
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 gap-5 justify-items-center justify-content-center p-10"
-    >
-      <div>
-        <h2 class="text-2xl font-bold mb-5">Fran Moreno Web</h2>
-        <img src="/franmoreno.png" class="shadow-2xl border-2 mb-8 max-h-72" />
-        <div class="flex gap-4 justify-center">
-          <a
-            class="px-4 py-2 border-slate-500 border-2 rounded-md font-bold"
-            href="https://github.com/siner/astro.franmoreno"
-            target="_blank"
-            >Github
-          </a>
-        </div>
+  <div class="md:flex container mx-auto mb-10 gap-10">
+    <div class="mt-10 md:mt-0 md:w-1/2 space-y-4">
+      <h2 class="text-4xl font-bold mb-5">Último artículo del blog</h2>
+      <div class="grid grid-cols-1">
+        {
+          posts
+            .slice(0, 1)
+            .map((post) => (
+              <Post
+                url={'/blog/' + post.frontmatter.slug}
+                img={'/blog/' + post.frontmatter.image}
+                title={post.frontmatter.title}
+                date={post.frontmatter.pubDate}
+              />
+            ))
+        }
       </div>
-      <div>
-        <h2 class="text-2xl font-bold mb-5">Torneos Poker Live</h2>
-        <img
-          src="/torneospokerlive.png"
-          class="shadow-2xl border-2 mb-8 max-h-72"
-        />
-        <div class="flex gap-4 justify-center">
-          <a
-            class="px-4 py-2 border-slate-500 border-2 rounded-md font-bold"
-            href="https://torneospokerlive.com"
-            target="_blank"
-            >Visit Project
-          </a>
-          <a
-            class="px-4 py-2 border-slate-500 border-2 rounded-md font-bold"
-            target="_blank"
-            href="https://github.com/siner/astro.torneospoker"
-            >Github
-          </a>
-        </div>
+    </div>
+    <div class="mt-10 md:mt-0 md:w-1/2 space-y-4">
+      <h2 class="text-4xl font-bold mb-5">Proyectos</h2>
+      <div class="grid grid-cols-1 gap-10">
+        <Project
+          title="Mi web"
+          github="https://github.com/siner/astro.franmoreno"
+        >
+          <p>
+            Esta web, hecha con el framework <a
+              class="font-bold"
+              href="https://astro.build"
+              target="_blank"
+              >Astro
+            </a>
+          </p>
+        </Project>
+
+        <Project
+          title="Torneos Poker Live"
+          github="https://github.com/siner/astro.torneospoker"
+          url="https://torneospokerlive.com"
+        >
+          <p>
+            Web contenedora de torneos de Poker en vivo en todos los casinos de
+            España, desarrollada con el framework <a
+              class="font-bold"
+              href="https://astro.build"
+              target="_blank"
+              >Astro
+            </a> y <a
+              class="font-bold"
+              href="https://supabase.com"
+              target="_blank"
+              >Supabase
+            </a> como backend.
+          </p>
+        </Project>
       </div>
     </div>
   </div>
 
   <div class="container mx-auto skills text-center">
-    <h2 class="text-4xl font-bold mb-5">Skills</h2>
+    <h2 class="text-4xl font-bold mb-5">Skills y tecnologías</h2>
 
-    <div
-      class="grid grid-cols-5 gap-5 justify-items-center justify-content-center"
-    >
+    <div class="grid grid-cols-7 gap-2 justify-content-center">
       {
         skills.map((skill) => (
-          <Devicon
-            name={`devicon-${skill.name}-plain`}
-            stars={skill.stars}
-            client:load
-          />
+          <div class="iconcontainer mt-5 flex flex-col justify-end">
+            <i class={`devicon devicon-${skill.name}-plain`} />
+            <strong>{skill.name}</strong>
+          </div>
         ))
       }
     </div>

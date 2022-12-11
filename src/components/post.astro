@@ -1,0 +1,15 @@
+---
+const { title, img, url, date } = Astro.props
+---
+
+<div class="rounded overflow-hidden shadow-lg">
+  <a href={url}>
+    <img src={img} alt={title} />
+  </a>
+  <div class="px-6 py-4">
+    <p class="mb-2"><small>{date}</small></p>
+    <a href={url} class="font-bold mb-2">
+      {title}
+    </a>
+  </div>
+</div>
