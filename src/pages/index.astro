@@ -3,32 +3,12 @@ import Layout from '../layouts/Layout.astro'
 import Project from '../components/project.astro'
 import { ArenguForm } from 'react-arengu-forms'
 import Post from '../components/post.astro'
+import Stack from '../components/stack.astro'
 
 const posts = await Astro.glob('../pages/blog/**/*.md')
 posts.sort(
   (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
 )
-
-const skills = [
-  { name: 'php' },
-  { name: 'mysql' },
-  { name: 'html5' },
-  { name: 'css' },
-  { name: 'wordpress' },
-  { name: 'nodejs' },
-  { name: 'react' },
-  { name: 'nextjs' },
-  { name: 'astro' },
-  { name: 'vue' },
-  { name: 'nuxtjs' },
-  { name: 'strapi' },
-  { name: 'git' },
-  { name: 'github' },
-  { name: 'bash' },
-  { name: 'digitalocean' },
-  { name: 'cloudflare' },
-  { name: 'figma' }
-]
 ---
 
 <Layout
@@ -143,20 +123,7 @@ const skills = [
   <div class="container mx-auto skills text-center">
     <h2 class="text-4xl font-bold mb-5">Stack</h2>
 
-    <div class="grid grid-cols-4 md:grid-cols-6 gap-2 justify-center">
-      {
-        skills.map((skill) => (
-          <div class="iconcontainer mt-5 flex flex-col justify-center">
-            <img
-              src={'/svg/' + skill.name + '.svg'}
-              class="w-16 mx-auto"
-              alt={skill.name}
-            />
-            <small>{skill.name}</small>
-          </div>
-        ))
-      }
-    </div>
+    <Stack />
   </div>
 </Layout>
 

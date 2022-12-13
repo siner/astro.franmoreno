@@ -1,0 +1,39 @@
+---
+const skills = [
+  { name: 'php' },
+  { name: 'mysql' },
+  { name: 'html5' },
+  { name: 'css' },
+  { name: 'wordpress' },
+  { name: 'nodejs' },
+  { name: 'react' },
+  { name: 'nextjs' },
+  { name: 'astro' },
+  { name: 'vue' },
+  { name: 'nuxtjs' },
+  { name: 'strapi' },
+  { name: 'git' },
+  { name: 'github' },
+  { name: 'bash' },
+  { name: 'vercel' },
+  { name: 'supabase' },
+  { name: 'digitalocean' },
+  { name: 'cloudflare' },
+  { name: 'figma' }
+]
+---
+
+<div class="grid grid-cols-4 md:grid-cols-5 gap-2 justify-center">
+  {
+    skills.map((skill) => (
+      <div class="iconcontainer mt-5 flex flex-col justify-center">
+        <img
+          src={'/svg/' + skill.name + '.svg'}
+          class="w-16 mx-auto"
+          alt={skill.name}
+        />
+        <small>{skill.name}</small>
+      </div>
+    ))
+  }
+</div>
