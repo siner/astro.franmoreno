@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
-const posts = await Astro.glob('../pages/blog/**/*.mdx')
+const posts = await Astro.glob('../pages/blog/**/*.md')
 posts.sort(
   (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
 )

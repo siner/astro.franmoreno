@@ -4,7 +4,7 @@ import Project from '../components/project.astro'
 import { ArenguForm } from 'react-arengu-forms'
 import Post from '../components/post.astro'
 
-const posts = await Astro.glob('../pages/blog/**/*.mdx')
+const posts = await Astro.glob('../pages/blog/**/*.md')
 posts.sort(
   (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
 )
