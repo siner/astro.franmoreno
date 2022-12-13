@@ -14,16 +14,20 @@ import Button from './elements/button.astro'
     {
       url && (
         <Button url={url}>
-          <i class="devicon-chrome-plain" />
-          Ver web
+          <div class="flex gap-2">
+            <img src={'/svg/chrome.svg'} alt="Chrome" class="w-4" />
+            <span>Ver web</span>
+          </div>
         </Button>
       )
     }
     {
       github && (
         <Button url={github}>
-          <i class="devicon-github-plain" />
-          Github
+          <div class="flex gap-2">
+            <img src={'/svg/github.svg'} alt="Github" class="w-4" />
+            <span>Github</span>
+          </div>
         </Button>
       )
     }
