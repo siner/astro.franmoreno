@@ -28,7 +28,7 @@ function SwitchDark() {
           <Sun />
           <Moon />
         </div>
-        <label forhtml="toggle" className="hidden"></label>
+        <label htmlFor="toggle" className="hidden"></label>
         <input
           id="toggle"
           name="toggle"
