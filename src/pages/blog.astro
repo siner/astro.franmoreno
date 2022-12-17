@@ -16,8 +16,8 @@ import Post from '../components/post.astro'
       {
         posts.map((post) => (
           <Post
-            url={'/blog/' + post.frontmatter.slug}
-            img={'/blog/' + post.frontmatter.image}
+            url={post.frontmatter.slug}
+            img={post.frontmatter.image}
             title={post.frontmatter.title}
             date={post.frontmatter.pubDate}
           />

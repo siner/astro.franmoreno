@@ -4,7 +4,7 @@ const { title, img, url, date } = Astro.props
 
 <div class="rounded overflow-hidden shadow-lg">
   <a href={url}>
-    <img src={img} width="300" class="w-full" alt={title} />
+    <img src={img} width="300" class="w-full h-52 object-cover" alt={title} />
   </a>
   <div class="px-6 py-4">
     <p class="mb-2">🗓️ <time><small>{date}</small></time></p>

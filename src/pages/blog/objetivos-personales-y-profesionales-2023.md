@@ -5,8 +5,8 @@ description: 'Una de las cosas que empecé a hacer desde que uso GTD como mi sis
 author: 'Fran Moreno'
 pubDate: '17 Dec, 2022'
 date: '2022-12-17'
-image: 'george-pagan-iii-9GdMuamOGlc-unsplash.webp'
-slug: 'objetivos-personales-y-profesionales-2023'
+image: '/blog/objetivos-personales-y-profesionales-2023.jpg'
+slug: '/blog/objetivos-personales-y-profesionales-2023'
 ---
 
 Una de las cosas que empecé a hacer desde que uso [GTD como mi sistema de gestión](https://franmoreno.com/blog/gestionar-vida-notion-metodologia-gtd/) de tareas es establecer objetivos, para tener una visión de alto nivel de lo que quiero hacer en mi vida y en mi carrera profesional.
