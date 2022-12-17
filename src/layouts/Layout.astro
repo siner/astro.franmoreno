@@ -8,7 +8,7 @@ export interface Props {
 
 const { title, description, image, type } = Astro.props as Props
 
-const imageurl = new URL("/blog/"+image,Astro.site);
+const imageurl = new URL(image,Astro.site);
 const url = new URL(Astro.url.pathname, Astro.site);
 
 import Header from '../components/header.astro'
