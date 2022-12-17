@@ -9,16 +9,19 @@ import Button from '../components/elements/button.astro'
 >
   <div class="md:flex items-center container mx-auto gap-10">
     <div class="md:w-1/2 mx-auto mt-10 justify-center text-center text-lg">
-      <h1 class="text-4xl font-bold mb-5">404</h1>
+      <h1 class="text-4xl font-bold mb-5">Página no encontrada</h1>
       <img src="/notfound.jpg" alt="Not Found" />
 
       <div class="flex mt-4 justify-center">
-        <Button url="/">
+        <a
+          class="px-4 py-2 border-gray-300 border-2 rounded-md font-bold hover:bg-gray-600 hover:border-gray-600 hover:text-[#f5f5f5] dark:hover:bg-[#f5f5f5] dark:hover:text-[#333333]"
+          href="/"
+        >
           <div class="flex gap-2">
             <img src={'/svg/chrome.svg'} alt="Chrome" width="10" class="w-4" />
             <span>Volver al inicio</span>
           </div>
-        </Button>
+        </a>
       </div>
     </div>
   </div>
