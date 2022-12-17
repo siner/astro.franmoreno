@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Button from '../components/elements/button.astro'
+---
+
+<Layout
+  title="404 - Not Found - Fran Moreno - Desarrollador Web"
+  description="404 - Not Found"
+>
+  <div class="md:flex items-center container mx-auto gap-10">
+    <div class="md:w-1/2 mx-auto mt-10 justify-center text-center text-lg">
+      <h1 class="text-4xl font-bold mb-5">404</h1>
+      <img src="/notfound.jpg" alt="Not Found" />
+
+      <div class="flex mt-4 justify-center">
+        <Button url="/">
+          <div class="flex gap-2">
+            <img src={'/svg/chrome.svg'} alt="Chrome" width="10" class="w-4" />
+            <span>Volver al inicio</span>
+          </div>
+        </Button>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -2,8 +2,8 @@
 export interface Props {
   title: string
   description: string
-  image: string
-  type: string
+  image?: string
+  type?: string
 }
 
 const { title, description, image, type } = Astro.props as Props
