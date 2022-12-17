@@ -1,13 +1,10 @@
 ---
-export interface Props {
-  title: string
-}
 import Layout from './Layout.astro'
 
 import '../styles/globals.css'
 
 const {
-  frontmatter: { title, description, pubDate, image, author }
+  frontmatter: { title, description, pubDate, image }
 } = Astro.props
 ---
 
