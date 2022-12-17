@@ -2,9 +2,14 @@
 export interface Props {
   title: string
   description: string
+  image: string
+  type: string
 }
 
-const { title, description } = Astro.props as Props
+const { title, description, image, type } = Astro.props as Props
+
+const imageurl = new URL("/blog/"+image,Astro.site);
+const url = new URL(Astro.url.pathname, Astro.site);
 
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
@@ -21,6 +26,18 @@ import '../styles/globals.css'
     <script async src="https://sdk.arengu.com/forms.js"></script>
     <title>{title}</title>
     <meta name="description" content={description} />
+
+    <meta property="og:url" content={url} />
+    {type && type==="blog" &&(
+      <meta property="og:type" content="article" />
+      <meta property="og:image" content={imageurl} />
+      <meta name="twitter:card" content="summary" />
+    )}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+
+    <meta name="twitter:site" content="@siner" />
+    <meta name="twitter:creator" content="@siner" />
   </head>
   <body class="dark:bg-[#333333] dark:text-[#f5f5f5]">
     <Header />
