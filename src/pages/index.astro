@@ -61,13 +61,13 @@ posts.sort(
     </div>
   </div>
 
-  <div class="md:flex container mx-auto mb-10 gap-10 mt-10">
-    <div class="mt-10 md:mt-0 md:w-7/12 space-y-4">
+  <div class="container mx-auto mb-10 mt-10">
+    <div class="mt-10 md:mt-0 space-y-4">
       <h2 class="text-4xl font-bold mb-5">Últimos artículos</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         {
           posts
-            .slice(0, 2)
+            .slice(0, 3)
             .map((post) => (
               <Post
                 url={post.frontmatter.slug}
@@ -79,9 +79,9 @@ posts.sort(
         }
       </div>
     </div>
-    <div class="mt-10 md:mt-0 md:w-5/12 space-y-4">
+    <div class="mt-10 space-y-4">
       <h2 class="text-4xl font-bold mb-5">Proyectos</h2>
-      <div class="grid grid-cols-1 gap-5">
+      <div class="grid grid-cols-2 gap-5">
         <Project
           title="Mi web"
           github="https://github.com/siner/astro.franmoreno"
@@ -98,16 +98,21 @@ posts.sort(
 
         <Project
           title="Torneos Poker Live"
-          github="https://github.com/siner/astro.torneospoker"
+          github="https://github.com/siner/nextjs.torneospokerlive"
           url="https://torneospokerlive.com"
         >
           <p>
             Web contenedora de torneos de Poker en vivo en todos los casinos de
             España, desarrollada con el framework <a
               class="font-bold"
-              href="https://astro.build"
+              href="https://nextjs.org/"
               target="_blank"
-              >Astro
+              >NextJS
+            </a>, <a
+              class="font-bold"
+              href="https://www.prisma.io/"
+              target="_blank"
+              >Prisma
             </a> y <a
               class="font-bold"
               href="https://supabase.com"
