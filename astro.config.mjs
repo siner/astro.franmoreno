@@ -7,6 +7,6 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://franmoreno.com',
+  site: 'https://franmoreno.com/',
   integrations: [tailwind(), react(), mdx(), sitemap()]
 })
