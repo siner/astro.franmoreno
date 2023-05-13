@@ -26,7 +26,6 @@
   },
   "dependencies": {
     "@astrojs/rss": "^1.1.0",
-    "react-arengu-forms": "^1.0.4",
     "sanitize-html": "^2.8.0"
   }
 }

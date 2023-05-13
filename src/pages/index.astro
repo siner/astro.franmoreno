@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Project from '../components/project.astro'
-import { ArenguForm } from 'react-arengu-forms'
 import Post from '../components/post.astro'
 import Stack from '../components/stack.astro'
 
@@ -16,7 +15,7 @@ posts.sort(
   description="Web de Fran Moreno, Desarrollador Web"
 >
   <div class="md:flex items-center container mx-auto gap-10">
-    <div class="mt-10 md:mt-0 md:w-2/3 space-y-4 text-lg">
+    <div class="mt-10 space-y-4 text-lg">
       <h1 class="text-4xl font-bold mb-5">Hola 👋🏽</h1>
       <p>
         Soy <strong>Fran Moreno</strong>, Ingeniero informático con más de 15
@@ -55,9 +54,6 @@ posts.sort(
         quieres contactar conmigo solo tienes que rellenar el siguiente
         formulario.
       </p>
-    </div>
-    <div class="flex-1 mt-5 md:pt-20">
-      <ArenguForm id={import.meta.env.SECRET_ARENGU_ID} client:load />
     </div>
   </div>
 
