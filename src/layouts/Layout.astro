@@ -6,12 +6,13 @@ const url = new URL(Astro.url.pathname, Astro.site);
 
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
+import { ViewTransitions } from 'astro:transitions';
 
 import '../styles/globals.css'
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" transition:animate="none">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -32,10 +33,12 @@ import '../styles/globals.css'
     )}
     <meta name="twitter:site" content="@siner" />
     <meta name="twitter:creator" content="@siner" />
+    <ViewTransitions />
+
   </head>
   <body class="dark:bg-[#333333] dark:text-[#f5f5f5]">
     <Header />
-    <div class="mx-4">
+    <div class="mx-4" transition:animate="fade">
       <slot />
     </div>
     <Footer />

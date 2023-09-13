@@ -3,7 +3,9 @@ import Moon from './moon'
 import Sun from './sun'
 
 function SwitchDark() {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light')
+  const [theme, setTheme] = useState(
+    window.localStorage.getItem('theme') ?? 'light'
+  )
 
   const handleClick = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
@@ -15,7 +17,7 @@ function SwitchDark() {
     } else {
       document.documentElement.classList.remove('dark')
     }
-    localStorage.setItem('theme', theme)
+    window.localStorage.setItem('theme', theme)
   }, [theme])
 
   return (

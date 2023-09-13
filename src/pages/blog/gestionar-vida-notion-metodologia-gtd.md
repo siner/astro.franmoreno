@@ -29,7 +29,7 @@ El sistema GTD tiene como objetivo liberar tu mente de tareas recurrentes que se
 
 Y define el proceso que debes seguir para que todo este engranaje funcione bien:
 
-![Proceso GTD](/blog/gtd.webp)
+![Proceso GTD](/blog/gtd.jpg)
 
 ## Vale, ahora tengo que poner todo esto en algún sitio
 
