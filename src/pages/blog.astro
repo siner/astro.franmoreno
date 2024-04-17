@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro'
-const posts = await Astro.glob('../pages/blog/**/*.md')
-posts.sort(
-  (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
-)
 
 import Post from '../components/post.astro'
+
+import { getCollection } from 'astro:content'
+
+const posts = await getCollection('blog')
+
+posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date))
 ---
 
 <Layout title="Blog - Fran Moreno" description="Blog de Fran Moreno">
@@ -16,10 +18,10 @@ import Post from '../components/post.astro'
       {
         posts.map((post) => (
           <Post
-            url={post.frontmatter.slug}
-            img={post.frontmatter.image}
-            title={post.frontmatter.title}
-            date={post.frontmatter.pubDate}
+            url={'/blog/' + post.slug}
+            img={post.data.image}
+            title={post.data.title}
+            date={post.data.pubDate}
           />
         ))
       }
@@ -27,6 +29,4 @@ import Post from '../components/post.astro'
   </div>
 </Layout>
 
-<style>
-
-</style>
+<style></style>

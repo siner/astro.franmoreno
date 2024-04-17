@@ -6,7 +6,6 @@ author: 'Fran Moreno'
 pubDate: '14 Dec, 2022'
 date: '2022-12-14'
 image: '/blog/gestionar-vida-notion-metodologia-gtd.jpg'
-slug: '/blog/gestionar-vida-notion-metodologia-gtd'
 ---
 
 Desde que tengo uso de razón me he considerado una persona **más o menos organizada**, que suele acordarse de las reuniones y fechas importantes, que puede llevar a cabo proyectos de medio y largo plazo sin muchos problemas y que puede gestionarse medio bien. Pero no siempre todo sale tan fácil como nos gustaría, no siempre cumplimos los plazos y no siempre tenemos todo bajo control.
