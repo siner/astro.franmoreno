@@ -10,15 +10,17 @@ specifiers:
   '@tailwindcss/typography': ^0.5.8
   astro: ^3.0.13
   eslint-plugin-react-hooks: ^4.6.0
+  markdown-it: ^14.1.0
   prettier-plugin-astro: ^0.13.0
   react: ^18.2.0
   react-dom: ^18.2.0
   sanitize-html: ^2.8.0
-  typescript: ^5.2.2
-  wrangler: ^2.21.1
+  typescript: ^5.4.5
+  wrangler: ^2.0.26
 
 dependencies:
   '@astrojs/rss': 1.2.1
+  markdown-it: 14.1.0
   sanitize-html: 2.13.0
 
 devDependencies:
@@ -2215,7 +2217,6 @@ packages:
       {
         integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
       }
-    dev: true
 
   /array-iterate/2.0.1:
     resolution:
@@ -4251,6 +4252,15 @@ packages:
     engines: { node: '>=14' }
     dev: true
 
+  /linkify-it/5.0.0:
+    resolution:
+      {
+        integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==
+      }
+    dependencies:
+      uc.micro: 2.1.0
+    dev: false
+
   /load-yaml-file/0.2.0:
     resolution:
       {
@@ -4387,6 +4397,21 @@ packages:
       }
     engines: { node: '>=0.10.0' }
     dev: true
+
+  /markdown-it/14.1.0:
+    resolution:
+      {
+        integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==
+      }
+    hasBin: true
+    dependencies:
+      argparse: 2.0.1
+      entities: 4.5.0
+      linkify-it: 5.0.0
+      mdurl: 2.0.0
+      punycode.js: 2.3.1
+      uc.micro: 2.1.0
+    dev: false
 
   /markdown-table/3.0.3:
     resolution:
@@ -4670,6 +4695,13 @@ packages:
     dependencies:
       '@types/mdast': 3.0.15
     dev: true
+
+  /mdurl/2.0.0:
+    resolution:
+      {
+        integrity: sha512-Lf+9+2r+Tdp5wXDXC4PcIBjTDtq4UKjCPMQhKIuzpJNW0b96kVqSwW0bT7FhRSfmAiFYgP+SCRvdrDozfh0U5w==
+      }
+    dev: false
 
   /merge-stream/2.0.0:
     resolution:
@@ -5903,6 +5935,14 @@ packages:
     dev: true
     optional: true
 
+  /punycode.js/2.3.1:
+    resolution:
+      {
+        integrity: sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA==
+      }
+    engines: { node: '>=6' }
+    dev: false
+
   /queue-microtask/1.2.3:
     resolution:
       {
@@ -6909,6 +6949,13 @@ packages:
     engines: { node: '>=14.17' }
     hasBin: true
     dev: true
+
+  /uc.micro/2.1.0:
+    resolution:
+      {
+        integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==
+      }
+    dev: false
 
   /ultrahtml/1.5.3:
     resolution:
