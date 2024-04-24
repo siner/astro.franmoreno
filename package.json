@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@astrojs/rss": "^1.1.0",
+    "markdown-it": "^14.1.0",
     "sanitize-html": "^2.8.0"
   }
 }
