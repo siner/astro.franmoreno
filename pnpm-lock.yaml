@@ -6,7 +6,7 @@ specifiers:
   '@astrojs/react': ^3.0.2
   '@astrojs/rss': ^1.1.0
   '@astrojs/sitemap': ^1.0.1
-  '@astrojs/tailwind': ^5.1.0
+  '@astrojs/tailwind': ^5.0.0
   '@tailwindcss/typography': ^0.5.8
   astro: ^3.0.13
   eslint-plugin-react-hooks: ^4.6.0
@@ -14,7 +14,7 @@ specifiers:
   react: ^18.2.0
   react-dom: ^18.2.0
   sanitize-html: ^2.8.0
-  typescript: ^5.2.2
+  typescript: ^5.4.5
   wrangler: ^2.0.26
 
 dependencies:
