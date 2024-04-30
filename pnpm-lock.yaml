@@ -7,7 +7,7 @@ specifiers:
   '@astrojs/rss': ^4.0.5
   '@astrojs/sitemap': ^3.1.4
   '@astrojs/tailwind': ^5.1.0
-  '@tailwindcss/typography': ^0.5.13
+  '@tailwindcss/typography': ^0.5.8
   astro: ^4.7.0
   eslint-plugin-react-hooks: ^4.6.0
   markdown-it: ^14.1.0
@@ -16,7 +16,7 @@ specifiers:
   react-dom: ^18.2.0
   sanitize-html: ^2.8.0
   typescript: ^5.2.2
-  wrangler: ^3.0.0
+  wrangler: ^3.53.0
 
 dependencies:
   '@astrojs/rss': 4.0.5
@@ -36,7 +36,7 @@ devDependencies:
   react: 18.3.0
   react-dom: 18.3.0_react@18.3.0
   typescript: 5.4.5
-  wrangler: 3.52.0
+  wrangler: 3.53.0
 
 packages:
 
@@ -62,7 +62,7 @@ packages:
       magic-string: 0.30.10
       miniflare: 3.20240419.0
       tiny-glob: 0.2.9
-      wrangler: 3.52.0_wkoi5p6dqk6jcwmwbaoxexfqxi
+      wrangler: 3.53.0_wkoi5p6dqk6jcwmwbaoxexfqxi
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -3673,9 +3673,9 @@ packages:
       stoppable: 1.1.0
       undici: 5.28.4
       workerd: 1.20240419.0
-      ws: 8.16.0
+      ws: 8.17.0
       youch: 3.3.3
-      zod: 3.23.4
+      zod: 3.23.5
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -4858,8 +4858,8 @@ packages:
       '@cloudflare/workerd-windows-64': 1.20240419.0
     dev: true
 
-  /wrangler/3.52.0:
-    resolution: {integrity: sha512-HR06jTym+yr7+CI3Ggld3nfp1OM9vSC7h4B8vwWHwhi5K0sYg8p44rxV514Gmsv9dkFHegkRP70SM3sjuuxxpQ==}
+  /wrangler/3.53.0:
+    resolution: {integrity: sha512-JxkvCQekL9j8Mu4CEKM/HEVyDnymWzKQuMUuJH0yum1AilutD5HAP9kVVYmvu7BvwlRyRUAj8TI5OUxXnLCEpQ==}
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
@@ -4890,8 +4890,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /wrangler/3.52.0_wkoi5p6dqk6jcwmwbaoxexfqxi:
-    resolution: {integrity: sha512-HR06jTym+yr7+CI3Ggld3nfp1OM9vSC7h4B8vwWHwhi5K0sYg8p44rxV514Gmsv9dkFHegkRP70SM3sjuuxxpQ==}
+  /wrangler/3.53.0_wkoi5p6dqk6jcwmwbaoxexfqxi:
+    resolution: {integrity: sha512-JxkvCQekL9j8Mu4CEKM/HEVyDnymWzKQuMUuJH0yum1AilutD5HAP9kVVYmvu7BvwlRyRUAj8TI5OUxXnLCEpQ==}
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
@@ -4932,8 +4932,8 @@ packages:
       strip-ansi: 7.1.0
     dev: true
 
-  /ws/8.16.0:
-    resolution: {integrity: sha512-HS0c//TP7Ina87TfiPUz1rQzMhHrl/SG2guqRcTOIUYD2q8uhUdNHZYJUaQ8aTGPzCh+c6oawMKW35nFl1dxyQ==}
+  /ws/8.17.0:
+    resolution: {integrity: sha512-uJq6108EgZMAl20KagGkzCKfMEjxmKvZHG7Tlq0Z6nOky7YF7aq4mOx6xK8TJ/i1LeK4Qus7INktacctDgY8Ow==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -4996,6 +4996,10 @@ packages:
 
   /zod/3.23.4:
     resolution: {integrity: sha512-/AtWOKbBgjzEYYQRNfoGKHObgfAZag6qUJX1VbHo2PRBgS+wfWagEY2mizjfyAPcGesrJOcx/wcl0L9WnVrHFw==}
+    dev: true
+
+  /zod/3.23.5:
+    resolution: {integrity: sha512-fkwiq0VIQTksNNA131rDOsVJcns0pfVUjHzLrNBiF/O/Xxb5lQyEXkhZWcJ7npWsYlvs+h0jFWXXy4X46Em1JA==}
     dev: true
 
   /zwitch/2.0.4:
