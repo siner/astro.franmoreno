@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/cloudflare': ^10.2.4
+  '@astrojs/cloudflare': ^10.2.5
   '@astrojs/mdx': ^2.3.1
   '@astrojs/react': ^3.3.1
   '@astrojs/rss': ^4.0.5
@@ -16,7 +16,7 @@ specifiers:
   react-dom: ^18.2.0
   sanitize-html: ^2.8.0
   typescript: ^5.2.2
-  wrangler: ^3.53.1
+  wrangler: ^3.0.0
 
 dependencies:
   '@astrojs/rss': 4.0.5
@@ -24,7 +24,7 @@ dependencies:
   sanitize-html: 2.13.0
 
 devDependencies:
-  '@astrojs/cloudflare': 10.2.4_astro@4.7.1
+  '@astrojs/cloudflare': 10.2.5_astro@4.7.1
   '@astrojs/mdx': 2.3.1_astro@4.7.1
   '@astrojs/react': 3.3.2_nnrd3gsncyragczmpvfhocinkq
   '@astrojs/sitemap': 3.1.4
@@ -48,21 +48,21 @@ packages:
       '@jridgewell/trace-mapping': 0.3.25
     dev: true
 
-  /@astrojs/cloudflare/10.2.4_astro@4.7.1:
-    resolution: {integrity: sha512-/9uw09VEEjbfv1yeER4qEWkuQWqJvIAlcZZSSkqcB8/ZCOz/TPzXimvmhndIWCTUsBFvQNP4fqemMtoEAW92Ug==}
+  /@astrojs/cloudflare/10.2.5_astro@4.7.1:
+    resolution: {integrity: sha512-5tKPU5m/zYwz2CU9vCSKo4tgWsdD7xwpUlDkVbKPwgSkfVB6ZuXb8ffLYnahtUc1Gvh7HgaBSaagPVHGCp73WQ==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
       '@astrojs/internal-helpers': 0.3.0
       '@astrojs/underscore-redirects': 0.3.3
-      '@cloudflare/workers-types': 4.20240423.0
+      '@cloudflare/workers-types': 4.20240502.0
       astro: 4.7.1_typescript@5.4.5
       esbuild: 0.19.12
       estree-walker: 3.0.3
       magic-string: 0.30.10
       miniflare: 3.20240419.0
       tiny-glob: 0.2.9
-      wrangler: 3.53.1_wkoi5p6dqk6jcwmwbaoxexfqxi
+      wrangler: 3.53.1_2wqm35zqoaurayqu3hocgx6dp4
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -509,8 +509,8 @@ packages:
     dev: true
     optional: true
 
-  /@cloudflare/workers-types/4.20240423.0:
-    resolution: {integrity: sha512-ssuccb3j+URp6mP2p0PcQE9vmS3YeKBQnALHF9P3yQfUAFozuhTsDTbqmL+zPrJvUcG7SL2xVQkNDF9QJeKDZw==}
+  /@cloudflare/workers-types/4.20240502.0:
+    resolution: {integrity: sha512-OB1jIyPOzyOcuZFHWhsQnkRLN6u8+jmU9X3T4KZlGgn3Ivw8pBiswhLOp+yFeChR3Y4/5+V0hPFRko5SReordg==}
     dev: true
 
   /@cspotcode/source-map-support/0.8.1:
@@ -3693,7 +3693,7 @@ packages:
       workerd: 1.20240419.0
       ws: 8.17.0
       youch: 3.3.3
-      zod: 3.23.5
+      zod: 3.23.6
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -4914,7 +4914,7 @@ packages:
       - utf-8-validate
     dev: true
 
-  /wrangler/3.53.1_wkoi5p6dqk6jcwmwbaoxexfqxi:
+  /wrangler/3.53.1_2wqm35zqoaurayqu3hocgx6dp4:
     resolution: {integrity: sha512-bdMRQdHYdvowIwOhEMFkARIZUh56aDw7HLUZ/2JreBjj760osXE4Fc4L1TCkfRRBWgB6/LKF5LA4OcvORMYmHg==}
     engines: {node: '>=16.17.0'}
     hasBin: true
@@ -4925,7 +4925,7 @@ packages:
         optional: true
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.2
-      '@cloudflare/workers-types': 4.20240423.0
+      '@cloudflare/workers-types': 4.20240502.0
       '@esbuild-plugins/node-globals-polyfill': 0.2.3_esbuild@0.17.19
       '@esbuild-plugins/node-modules-polyfill': 0.2.2_esbuild@0.17.19
       blake3-wasm: 2.1.5
@@ -5024,6 +5024,10 @@ packages:
 
   /zod/3.23.5:
     resolution: {integrity: sha512-fkwiq0VIQTksNNA131rDOsVJcns0pfVUjHzLrNBiF/O/Xxb5lQyEXkhZWcJ7npWsYlvs+h0jFWXXy4X46Em1JA==}
+    dev: true
+
+  /zod/3.23.6:
+    resolution: {integrity: sha512-RTHJlZhsRbuA8Hmp/iNL7jnfc4nZishjsanDAfEY1QpDQZCahUp3xDzl+zfweE9BklxMUcgBgS1b7Lvie/ZVwA==}
     dev: true
 
   /zwitch/2.0.4:
