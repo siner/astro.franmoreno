@@ -9,7 +9,7 @@ const posts = await getCollection('blog')
 
 posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date))
 
-export const get = () =>
+export const GET = () =>
   rss({
     title: 'Fran Moreno | Blog',
     description: 'El Blog de Fran Moreno',
