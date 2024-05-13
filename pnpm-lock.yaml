@@ -1,14 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/cloudflare': ^10.2.4
+  '@astrojs/cloudflare': ^10.2.6
   '@astrojs/mdx': ^2.3.1
-  '@astrojs/react': ^3.3.4
+  '@astrojs/react': ^3.3.1
   '@astrojs/rss': ^4.0.5
   '@astrojs/sitemap': ^3.1.4
   '@astrojs/tailwind': ^5.1.0
   '@tailwindcss/typography': ^0.5.8
-  astro: ^4.8.2
+  astro: ^4.7.0
   eslint-plugin-react-hooks: ^4.6.0
   markdown-it: ^14.1.0
   prettier-plugin-astro: ^0.13.0
@@ -24,7 +24,7 @@ dependencies:
   sanitize-html: 2.13.0
 
 devDependencies:
-  '@astrojs/cloudflare': 10.2.5_astro@4.8.2
+  '@astrojs/cloudflare': 10.2.6_astro@4.8.2
   '@astrojs/mdx': 2.3.1_astro@4.8.2
   '@astrojs/react': 3.3.4_nnrd3gsncyragczmpvfhocinkq
   '@astrojs/sitemap': 3.1.4
@@ -48,8 +48,8 @@ packages:
       '@jridgewell/trace-mapping': 0.3.25
     dev: true
 
-  /@astrojs/cloudflare/10.2.5_astro@4.8.2:
-    resolution: {integrity: sha512-5tKPU5m/zYwz2CU9vCSKo4tgWsdD7xwpUlDkVbKPwgSkfVB6ZuXb8ffLYnahtUc1Gvh7HgaBSaagPVHGCp73WQ==}
+  /@astrojs/cloudflare/10.2.6_astro@4.8.2:
+    resolution: {integrity: sha512-pgAT9+D866T/ER/L1+t2HvTtJzWhnZF7h7g2ur2ssv3AriJsXrS+Pny6ZTLYY11tuCx7GNxjY4H0jz1AOxuLig==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
@@ -60,7 +60,7 @@ packages:
       esbuild: 0.19.12
       estree-walker: 3.0.3
       magic-string: 0.30.10
-      miniflare: 3.20240419.0
+      miniflare: 3.20240419.1
       tiny-glob: 0.2.9
       wrangler: 3.53.1_2wqm35zqoaurayqu3hocgx6dp4
     transitivePeerDependencies:
@@ -3925,6 +3925,29 @@ packages:
       ws: 8.17.0
       youch: 3.3.3
       zod: 3.23.6
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+    dev: true
+
+  /miniflare/3.20240419.1:
+    resolution: {integrity: sha512-Q9n0W07uUD/u0c/b03E4iogeXOAMjZnE3P7B5Yi8sPaZAx6TYWwjurGBja+Pg2yILN2iMaliEobfVyAKss33cA==}
+    engines: {node: '>=16.13'}
+    hasBin: true
+    dependencies:
+      '@cspotcode/source-map-support': 0.8.1
+      acorn: 8.11.3
+      acorn-walk: 8.3.2
+      capnp-ts: 0.7.0
+      exit-hook: 2.2.1
+      glob-to-regexp: 0.4.1
+      stoppable: 1.1.0
+      undici: 5.28.4
+      workerd: 1.20240419.0
+      ws: 8.17.0
+      youch: 3.3.3
+      zod: 3.23.8
     transitivePeerDependencies:
       - bufferutil
       - supports-color
