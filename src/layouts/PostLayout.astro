@@ -6,6 +6,7 @@ import '../styles/globals.css'
 const {
   frontmatter: { title, description, pubDate, image }
 } = Astro.props
+const date = new Date(pubDate)
 ---
 
 <Layout title={title} description={description} image={image} type="blog">
@@ -13,7 +14,7 @@ const {
     <div class="mx-auto prose lg:prose-xl dark:prose-invert">
       <h1>{title}</h1>
       {image && <img src={image} alt={title} />}
-      {pubDate && <time>🗓️ {pubDate}</time>}
+      {pubDate && <time>🗓️ {date.toLocaleDateString()}</time>}
       <hr />
       <slot />
     </div>

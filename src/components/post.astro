@@ -9,7 +9,7 @@ const { title, img, url, date } = Astro.props
     <Image src={img} width={300} height={200} class="w-full h-52 object-cover" alt={title} />
   </a>
   <div class="px-6 py-4">
-    <p class="mb-2">🗓️ <time><small>{date}</small></time></p>
+    <p class="mb-2">🗓️ <time><small>{date.toLocaleDateString()}</small></time></p>
     <a href={url} class="font-bold mb-2">
       {title}
     </a>
