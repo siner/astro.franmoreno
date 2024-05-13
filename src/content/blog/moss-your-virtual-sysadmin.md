@@ -1,11 +1,12 @@
 ---
 layout: ../../layouts/PostLayout.astro
-title: 'Moss.sh, your virtual sysadmin'
-description: 'Moss.sh, your virtual sysadmin'
-author: 'Fran Moreno'
-pubDate: '11 Jan, 2020'
-date: '2020-01-11'
-image: '/blog/moss-your-virtual-sysadmin.jpg'
+title: Moss.sh, your virtual sysadmin
+description: Moss.sh, your virtual sysadmin
+author: Fran Moreno
+pubDate: 2020-01-11T09:30:13.997Z
+date: 2020-01-11
+heroImage: /blog/moss-your-virtual-sysadmin.jpg
+image: /blog/moss-your-virtual-sysadmin.jpg
 ---
 
 Since I work as a web developer and deal with the Internet, I've always been fighting with several hosting providers, dedicated servers, VPS, update installation, package management, PHP versions, security patches... Then I discover [Moss.sh](https://moss.sh/?ref=b084ab56c373), and all these headaches disappeared, now it's like another step in the process, but not a problem to me.
