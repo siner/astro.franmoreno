@@ -150,6 +150,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"introducción-a-cloudflare-workers.md": {
+	id: "introducción-a-cloudflare-workers.md";
+  slug: "introducción-a-cloudflare-workers";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "moss-your-virtual-sysadmin.md": {
 	id: "moss-your-virtual-sysadmin.md";
   slug: "moss-your-virtual-sysadmin";
