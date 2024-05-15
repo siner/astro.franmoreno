@@ -157,6 +157,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"moviendo-mis-side-projects-a-cloudflare.md": {
+	id: "moviendo-mis-side-projects-a-cloudflare.md";
+  slug: "moviendo-mis-side-projects-a-cloudflare";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "objetivos-personales-y-profesionales-2023.md": {
 	id: "objetivos-personales-y-profesionales-2023.md";
   slug: "objetivos-personales-y-profesionales-2023";
