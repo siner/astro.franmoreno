@@ -1,17 +1,17 @@
 ---
 const { title, description, image, type } = Astro.props
 
-const imageurl = new URL(image,Astro.site);
-const url = new URL(Astro.url.pathname, Astro.site);
+const imageurl = new URL(image, Astro.site)
+const url = new URL(Astro.url.pathname, Astro.site)
 
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from 'astro:transitions'
 
 import '../styles/globals.css'
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es" transition:animate="none">
   <head>
     <meta charset="UTF-8" />
@@ -20,22 +20,30 @@ import '../styles/globals.css'
     <title>{title}</title>
     <meta name="description" content={description} />
 
-    <link rel="alternate" type="application/rss+xml" title="Fran Moreno Blog" href={`${Astro.site}rss.xml`} />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Fran Moreno Blog"
+      href={`${Astro.site}rss.xml`}
+    />
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={url} />
-    {type && type==="blog" &&(
-      <meta property="og:type" content="article" />
-      <meta property="og:image" content={imageurl} />
-      <meta name="twitter:image" content={imageurl}>
-      <meta name="twitter:card" content="summary_large_image">
-      <meta property="twitter:domain" content="franmoreno.com">
-    )}
+    {
+      type && type === 'blog' && (
+        <>
+          <meta property="og:type" content="article" />
+          <meta property="og:image" content={imageurl} />
+          <meta name="twitter:image" content={imageurl} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="twitter:domain" content="franmoreno.com" />
+        </>
+      )
+    }
     <meta name="twitter:site" content="@siner" />
     <meta name="twitter:creator" content="@siner" />
     <ViewTransitions />
-
   </head>
   <body class="dark:bg-[#333333] dark:text-[#f5f5f5]">
     <Header />

@@ -150,9 +150,9 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"introducción-a-cloudflare-workers.md": {
-	id: "introducción-a-cloudflare-workers.md";
-  slug: "introducción-a-cloudflare-workers";
+"introduccion-a-cloudflare-workers.md": {
+	id: "introduccion-a-cloudflare-workers.md";
+  slug: "introduccion-a-cloudflare-workers";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
