@@ -11,12 +11,12 @@ specifiers:
   astro: ^4.8.2
   eslint-plugin-react-hooks: ^4.6.0
   markdown-it: ^14.1.0
-  prettier-plugin-astro: ^0.14.0
+  prettier-plugin-astro: ^0.14.1
   react: ^18.2.0
   react-dom: ^18.2.0
   sanitize-html: ^2.8.0
   typescript: ^5.2.2
-  wrangler: ^3.66.0
+  wrangler: ^3.0.0
 
 dependencies:
   '@astrojs/rss': 4.0.6
@@ -32,7 +32,7 @@ devDependencies:
   '@tailwindcss/typography': 0.5.13
   astro: 4.11.0_typescript@5.4.5
   eslint-plugin-react-hooks: 4.6.2
-  prettier-plugin-astro: 0.14.0
+  prettier-plugin-astro: 0.14.1
   react: 18.3.1
   react-dom: 18.3.1_react@18.3.1
   typescript: 5.4.5
@@ -69,8 +69,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@astrojs/compiler/1.8.2:
-    resolution: {integrity: sha512-o/ObKgtMzl8SlpIdzaxFnt7SATKPxu4oIP/1NL+HDJRzxfJcAkOTAb/ZKMRyULbz4q+1t2/DAebs2Z1QairkZw==}
+  /@astrojs/compiler/2.10.1:
+    resolution: {integrity: sha512-XmM4j6BjvOVMag2xELq0JuG2yKOW8wgIu6dvb9BsjbGYmnvoStJn/pqEzVqc1EBszf2xYT7onIkftIOUz9AwrQ==}
     dev: true
 
   /@astrojs/compiler/2.8.0:
@@ -4099,17 +4099,17 @@ packages:
       which-pm: 2.0.0
     dev: true
 
-  /prettier-plugin-astro/0.14.0:
-    resolution: {integrity: sha512-7jRGJsexaRIyUzTk8uzXlP45cw6DQ5Ci4bTe0xCBCcuO1Fff8jJy9oI+kRCQKSdDFTSAArMSg8GpvzlKBtSaZA==}
+  /prettier-plugin-astro/0.14.1:
+    resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
     engines: {node: ^14.15.0 || >=16.0.0}
     dependencies:
-      '@astrojs/compiler': 1.8.2
-      prettier: 3.2.5
+      '@astrojs/compiler': 2.10.1
+      prettier: 3.3.3
       sass-formatter: 0.7.9
     dev: true
 
-  /prettier/3.2.5:
-    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+  /prettier/3.3.3:
+    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
