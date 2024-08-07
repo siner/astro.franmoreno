@@ -7,7 +7,7 @@ specifiers:
   '@astrojs/rss': ^4.0.5
   '@astrojs/sitemap': ^3.1.4
   '@astrojs/tailwind': ^5.1.0
-  '@tailwindcss/typography': ^0.5.8
+  '@tailwindcss/typography': ^0.5.14
   astro: ^4.8.2
   eslint-plugin-react-hooks: ^4.6.0
   markdown-it: ^14.1.0
@@ -16,7 +16,7 @@ specifiers:
   react-dom: ^18.2.0
   sanitize-html: ^2.8.0
   typescript: ^5.2.2
-  wrangler: ^3.66.0
+  wrangler: ^3.0.0
 
 dependencies:
   '@astrojs/rss': 4.0.6
@@ -29,7 +29,7 @@ devDependencies:
   '@astrojs/react': 3.6.0_nnrd3gsncyragczmpvfhocinkq
   '@astrojs/sitemap': 3.1.6
   '@astrojs/tailwind': 5.1.0_astro@4.11.0
-  '@tailwindcss/typography': 0.5.13
+  '@tailwindcss/typography': 0.5.14
   astro: 4.11.0_typescript@5.4.5
   eslint-plugin-react-hooks: 4.6.2
   prettier-plugin-astro: 0.14.0
@@ -1625,8 +1625,8 @@ packages:
     resolution: {integrity: sha512-O6j27b7dGmJbR3mjwh/aHH8Ld+GQvA0OQsNO43wKWnqbAae3AYXrhFyScHGX8hXZD6vX2ngjzDFkZY5srtIJbQ==}
     dev: true
 
-  /@tailwindcss/typography/0.5.13:
-    resolution: {integrity: sha512-ADGcJ8dX21dVVHIwTRgzrcunY6YY9uSlAHHGVKvkA+vLc5qLwEszvKts40lx7z0qc4clpjclwLeK5rVCV2P/uw==}
+  /@tailwindcss/typography/0.5.14:
+    resolution: {integrity: sha512-ZvOCjUbsJBjL9CxQBn+VEnFpouzuKhxh2dH8xMIWHILL+HfOYtlAkWcyoon8LlzE53d2Yo6YO6pahKKNW3q1YQ==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
