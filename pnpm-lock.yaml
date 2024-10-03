@@ -15,14 +15,14 @@ importers:
         specifier: ^14.1.0
         version: 14.1.0
       sanitize-html:
-        specifier: ^2.8.0
-        version: 2.13.0
+        specifier: ^2.13.1
+        version: 2.13.1
     devDependencies:
       '@astrojs/cloudflare':
-        specifier: ^11.0.4
+        specifier: ^11.1.0
         version: 11.1.0(astro@4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2))
       '@astrojs/mdx':
-        specifier: ^3.1.4
+        specifier: ^3.1.7
         version: 3.1.7(astro@4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2))
       '@astrojs/react':
         specifier: ^3.6.2
@@ -31,13 +31,13 @@ importers:
         specifier: ^3.1.6
         version: 3.1.6
       '@astrojs/tailwind':
-        specifier: ^5.1.0
+        specifier: ^5.1.1
         version: 5.1.1(astro@4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2))
       '@tailwindcss/typography':
         specifier: ^0.5.8
         version: 0.5.15
       astro:
-        specifier: ^4.14.5
+        specifier: ^4.15.9
         version: 4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2)
       eslint-plugin-react-hooks:
         specifier: ^4.6.0
@@ -2281,8 +2281,8 @@ packages:
   s.color@0.0.15:
     resolution: {integrity: sha512-AUNrbEUHeKY8XsYr/DYpl+qk5+aM+DChopnWOPEzn8YKzOhv4l2zH6LzZms3tOZP3wwdOyc0RmTciyi46HLIuA==}
 
-  sanitize-html@2.13.0:
-    resolution: {integrity: sha512-Xff91Z+4Mz5QiNSLdLWwjgBDm5b1RU6xBT0+12rapjiaR7SwfRdjw8f+6Rir2MXKLrDicRFHdb51hGOAxmsUIA==}
+  sanitize-html@2.13.1:
+    resolution: {integrity: sha512-ZXtKq89oue4RP7abL9wp/9URJcqQNABB5GGJ2acW1sdO8JTVl92f4ygD7Yc9Ze09VAZhnt2zegeU0tbNsdcLYg==}
 
   sass-formatter@0.7.9:
     resolution: {integrity: sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==}
@@ -5385,7 +5385,7 @@ snapshots:
 
   s.color@0.0.15: {}
 
-  sanitize-html@2.13.0:
+  sanitize-html@2.13.1:
     dependencies:
       deepmerge: 4.3.1
       escape-string-regexp: 4.0.0
