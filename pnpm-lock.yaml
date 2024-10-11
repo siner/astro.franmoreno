@@ -19,10 +19,10 @@ importers:
         version: 2.13.0
     devDependencies:
       '@astrojs/cloudflare':
-        specifier: ^11.0.4
+        specifier: ^11.1.0
         version: 11.1.0(astro@4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2))
       '@astrojs/mdx':
-        specifier: ^3.1.4
+        specifier: ^3.1.7
         version: 3.1.7(astro@4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2))
       '@astrojs/react':
         specifier: ^3.6.2
@@ -31,17 +31,17 @@ importers:
         specifier: ^3.1.6
         version: 3.1.6
       '@astrojs/tailwind':
-        specifier: ^5.1.0
+        specifier: ^5.1.1
         version: 5.1.1(astro@4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2))
       '@tailwindcss/typography':
         specifier: ^0.5.8
         version: 0.5.15
       astro:
-        specifier: ^4.14.5
+        specifier: ^4.15.9
         version: 4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2)
       eslint-plugin-react-hooks:
-        specifier: ^4.6.0
-        version: 4.6.2(eslint@8.57.1)
+        specifier: ^5.0.0
+        version: 5.0.0(eslint@8.57.1)
       prettier-plugin-astro:
         specifier: ^0.14.0
         version: 0.14.1
@@ -1281,11 +1281,11 @@ packages:
     resolution: {integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==}
     engines: {node: '>=12'}
 
-  eslint-plugin-react-hooks@4.6.2:
-    resolution: {integrity: sha512-QzliNJq4GinDBcD8gPB5v0wh6g8q3SUi6EFF0x8N/BL9PoVs0atuGc47ozMRyOWAKdwaZ5OnbOEa3WR+dSGKuQ==}
+  eslint-plugin-react-hooks@5.0.0:
+    resolution: {integrity: sha512-hIOwI+5hYGpJEc4uPRmz2ulCjAGD/N13Lukkh8cLV0i2IRk/bdZDYjgLVHj+U9Z704kLIdIO6iueGvxNur0sgw==}
     engines: {node: '>=10'}
     peerDependencies:
-      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
+      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
 
   eslint-scope@7.2.2:
     resolution: {integrity: sha512-dOt21O7lTMhDM+X9mB4GX+DZrZtCUJPL/wlcTqxyrx5IvO0IYtILdtrQGQp+8n5S0gwSVmOf9NQrjMOgfQZlIg==}
@@ -1298,6 +1298,7 @@ packages:
   eslint@8.57.1:
     resolution: {integrity: sha512-ypowyDxpVSYpkXr9WPv2PAZCtNip1Mv5KTW0SCurXv/9iOpcrH9PaqUElksqEB6pChqHGDRCFTyrZlGhnLNGiA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@9.6.1:
@@ -3958,7 +3959,7 @@ snapshots:
 
   escape-string-regexp@5.0.0: {}
 
-  eslint-plugin-react-hooks@4.6.2(eslint@8.57.1):
+  eslint-plugin-react-hooks@5.0.0(eslint@8.57.1):
     dependencies:
       eslint: 8.57.1
 
