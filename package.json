@@ -11,13 +11,13 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/cloudflare": "^11.1.0",
-    "@astrojs/mdx": "^3.1.7",
+    "@astrojs/cloudflare": "^11.2.0",
+    "@astrojs/mdx": "^3.1.9",
     "@astrojs/react": "^3.6.2",
-    "@astrojs/sitemap": "^3.1.6",
-    "@astrojs/tailwind": "^5.1.1",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/tailwind": "^5.1.2",
     "@tailwindcss/typography": "^0.5.8",
-    "astro": "^4.15.9",
+    "astro": "^4.16.13",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier-plugin-astro": "^0.14.0",
     "react": "^18.2.0",
@@ -26,7 +26,7 @@
     "wrangler": "^3.0.0"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.7",
+    "@astrojs/rss": "^4.0.9",
     "markdown-it": "^14.1.0",
     "sanitize-html": "^2.8.0"
   }
