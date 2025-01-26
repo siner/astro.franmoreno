@@ -62,10 +62,10 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
   <div class="container mx-auto mb-10 mt-10">
     <div class="mt-10 md:mt-0 space-y-4">
       <h2 class="text-4xl font-bold mb-5">Últimos artículos</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         {
           posts
-            .slice(0, 3)
+            .slice(0, 2)
             .map((post) => (
               <Post
                 url={'/blog/' + post.slug}
@@ -79,7 +79,7 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
     </div>
     <div class="mt-10 space-y-4">
       <h2 class="text-4xl font-bold mb-5">Proyectos</h2>
-      <div class="grid grid-cols-2 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
         <Project
           title="Mi web"
           github="https://github.com/siner/astro.franmoreno"
@@ -112,6 +112,22 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
               target="_blank"
               >Supabase
             </a> como backend.
+          </p>
+        </Project>
+
+        <Project
+          title="Reloj de Poker"
+          github="https://github.com/siner/nextjs.pokerclock"
+          url="https://reloj.torneospokerlive.com/"
+        >
+          <p>
+            Reloj para organizar torneos de poker en casa o con amigos, te
+            permite definir la estructura de ciegas, el tiempo, los premios,
+            etc... Desarrollado usando <a
+              class="font-bold"
+              href="https://nextjs.org/"
+              target="_blank">NextJS</a
+            >
           </p>
         </Project>
       </div>
