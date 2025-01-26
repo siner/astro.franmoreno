@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/PostLayout.astro
 title: Comenzando con los Custom Post Types en WordPress
 description: Comenzando con los Custom Post Types en WordPress
 author: Fran Moreno

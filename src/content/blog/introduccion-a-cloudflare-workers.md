@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/PostLayout.astro
 title: Introducción a Cloudflare Workers
 pubDate: 2024-05-15T14:12:53.895Z
 date: 2024-05-15

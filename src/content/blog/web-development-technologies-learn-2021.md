@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/PostLayout.astro
 title: Web development technologies I want to learn in 2021
 description: Here is a list of web technologies and languages I want to learn in 2021
 author: Fran Moreno

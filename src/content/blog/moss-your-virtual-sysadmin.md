@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/PostLayout.astro
 title: Moss.sh, your virtual sysadmin
 description: Moss.sh, your virtual sysadmin
 author: Fran Moreno

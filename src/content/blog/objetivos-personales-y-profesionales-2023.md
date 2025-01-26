@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/PostLayout.astro
 title: Objetivos personales y profesionales para 2023
 description: Cómo uso GTD como mi sistema de gestión de tareas para establecer objetivos y tener una mejor visión de lo que quiero hacer en mi vida.
 author: Fran Moreno

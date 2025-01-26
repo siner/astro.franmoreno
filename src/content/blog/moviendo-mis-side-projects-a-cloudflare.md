@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/PostLayout.astro
 title: Moviendo mis side projects a Cloudflare
 pubDate: 2024-05-13T09:24:48.463Z
 type: default

@@ -3,9 +3,7 @@ import Layout from './Layout.astro'
 
 import '../styles/globals.css'
 
-const {
-  frontmatter: { title, description, pubDate, image }
-} = Astro.props
+const { title, description, pubDate, image } = Astro.props
 const date = new Date(pubDate)
 ---
 

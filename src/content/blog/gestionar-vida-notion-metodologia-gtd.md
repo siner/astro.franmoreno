@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/PostLayout.astro
 title: Gestionar tu vida con Notion y la metodología GTD
 description: El sistema GTD tiene como objetivo liberar tu mente de tareas recurrentes que se pasean en bucle hasta que las haces
 author: Fran Moreno
