@@ -15,7 +15,7 @@
     "@astrojs/mdx": "^4.0.7",
     "@astrojs/react": "^4.1.6",
     "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/tailwind": "^5.1.5",
+    "@astrojs/tailwind": "^6.0.0",
     "@tailwindcss/typography": "^0.5.8",
     "astro": "^5.1.9",
     "eslint-plugin-react-hooks": "^4.6.0",
