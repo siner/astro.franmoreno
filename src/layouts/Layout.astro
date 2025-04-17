@@ -43,15 +43,29 @@ import '../styles/globals.css'
     }
     <meta name="twitter:site" content="@siner" />
     <meta name="twitter:creator" content="@siner" />
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="7568ef52-58f6-4b53-a7a2-9c6708c6df6c"></script>
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="7568ef52-58f6-4b53-a7a2-9c6708c6df6c"></script>
     <ViewTransitions />
   </head>
-  <body class="dark:bg-[#333333] dark:text-[#f5f5f5]">
-    <Header />
-    <div class="mx-4" transition:animate="fade">
-      <slot />
+  <body
+    class="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-[#333333] dark:to-[#222222] dark:text-[#f5f5f5] transition-colors duration-300"
+  >
+    <div class="relative">
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#444444_1px,transparent_1px)] [background-size:16px_16px] -z-10 opacity-50"
+      >
+      </div>
+      <Header />
+      <main
+        class="container mx-auto p-4 min-h-[calc(100vh-200px)]"
+        transition:animate="fade"
+      >
+        <slot />
+      </main>
+      <Footer />
     </div>
-    <Footer />
     <script is:inline>
       const theme = (() => {
         if (

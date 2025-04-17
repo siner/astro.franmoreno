@@ -2,24 +2,65 @@
 import { Image } from 'astro:assets'
 
 const { title, img, url, date } = Astro.props
+
+const formattedDate = new Date(date).toLocaleDateString('es-ES', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+})
 ---
 
-<div class="rounded overflow-hidden shadow-lg">
-  <a href={url}>
+<article
+  class="group relative flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-gray-800/50 shadow-md ring-1 ring-gray-900/5 transition-all duration-300 hover:shadow-xl dark:shadow-gray-800/10"
+>
+  <a href={url} class="relative overflow-hidden">
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-gray-900/0 opacity-0 group-hover:opacity-100 transition-opacity z-10"
+    >
+    </div>
     <Image
       src={img}
-      width={300}
-      height={200}
-      class="w-full h-52 object-cover"
+      width={800}
+      height={400}
+      class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
       alt={title}
     />
   </a>
-  <div class="px-6 py-4">
-    <p class="mb-2">
-      🗓️ <time><small>{date.toLocaleDateString()}</small></time>
-    </p>
-    <a href={url} class="font-bold mb-2">
-      {title}
-    </a>
+
+  <div class="flex flex-1 flex-col justify-between p-6">
+    <div class="flex-1">
+      <time class="text-sm text-gray-500 dark:text-gray-400">
+        {formattedDate}
+      </time>
+
+      <a href={url} class="mt-2 block">
+        <h3
+          class="text-xl font-semibold leading-tight text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors"
+        >
+          {title}
+        </h3>
+      </a>
+    </div>
+
+    <div class="mt-4">
+      <a
+        href={url}
+        class="inline-flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-500"
+      >
+        Leer más
+        <svg
+          class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
   </div>
-</div>
+</article>

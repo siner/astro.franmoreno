@@ -1,0 +1,188 @@
+---
+const { class: className } = Astro.props
+---
+
+<section class="relative overflow-hidden py-16 sm:py-24">
+  <!-- Fondo decorativo -->
+  <div class="absolute inset-0 -z-10">
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-amber-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 opacity-90"
+    >
+    </div>
+    <div
+      class="absolute inset-y-0 right-1/2 -left-72 -z-10 overflow-hidden rounded-r-[40px] bg-gray-50 dark:bg-gray-800/40 ring-1 ring-indigo-500/10 md:right-2/3"
+    >
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:max-w-none">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <!-- Contenido principal -->
+        <div class="max-w-2xl">
+          <h1
+            class="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 dark:from-gray-100 dark:via-gray-200 dark:to-gray-300 bg-clip-text text-transparent mb-8"
+          >
+            ¡Hola! 👋🏽 <br />
+            Soy Fran Moreno
+          </h1>
+          <p class="mt-6 text-lg leading-8 text-gray-800 dark:text-gray-300">
+            Ingeniero informático con más de 15 años de experiencia como <strong
+              class="font-semibold text-indigo-600 dark:text-indigo-300"
+              >Desarrollador Web</strong
+            >. Actualmente centrado en el desarrollo Frontend con <strong
+              class="font-semibold text-indigo-600 dark:text-indigo-300"
+              >React</strong
+            > (Astro y NextJS).
+          </p>
+
+          <!-- Lista de roles -->
+          <div class="mt-8 space-y-4">
+            <div class="flex items-center gap-4 group">
+              <div
+                class="flex-none rounded-full bg-indigo-600/10 p-2 group-hover:bg-indigo-600/20 dark:bg-indigo-400/10 dark:group-hover:bg-indigo-400/20 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5 text-indigo-600 dark:text-indigo-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <a
+                  href="https://www.sozpic.com"
+                  target="_blank"
+                  class="group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors"
+                >
+                  Cofundador de Sozpic
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 group">
+              <div
+                class="flex-none rounded-full bg-indigo-600/10 p-2 group-hover:bg-indigo-600/20 dark:bg-indigo-400/10 dark:group-hover:bg-indigo-400/20 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5 text-indigo-600 dark:text-indigo-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <a
+                  href="https://www.mineryreport.com"
+                  target="_blank"
+                  class="group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors"
+                >
+                  Senior React Developer en Minery Report
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 group">
+              <div
+                class="flex-none rounded-full bg-indigo-600/10 p-2 group-hover:bg-indigo-600/20 dark:bg-indigo-400/10 dark:group-hover:bg-indigo-400/20 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5 text-indigo-600 dark:text-indigo-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <a
+                  href="https://www.necesitounarma.com"
+                  target="_blank"
+                  class="group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors"
+                >
+                  Podcaster en Necesito un Arma
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-10 flex items-center gap-6">
+            <a
+              href="mailto:fran@franmoreno.com"
+              class="rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm bg-indigo-600 hover:bg-indigo-500 dark:bg-indigo-500 dark:hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors"
+            >
+              Contactar
+            </a>
+            <a
+              href="/blog"
+              class="text-sm font-semibold leading-6 text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
+            >
+              Ver blog <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Imagen decorativa -->
+        <div class="relative block">
+          <div class="absolute -inset-4">
+            <div
+              class="w-full h-full mx-auto rotate-[-4deg] rounded-3xl bg-gradient-to-r from-indigo-600/50 to-amber-600/50 opacity-30 blur-3xl"
+            >
+            </div>
+          </div>
+          <div
+            class="relative aspect-[4/3] overflow-hidden rounded-2xl bg-gray-50 dark:bg-gray-800/60 shadow-2xl ring-1 ring-gray-900/10 dark:ring-gray-100/10"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-indigo-600/40 to-amber-600/40 dark:from-indigo-400/30 dark:to-amber-400/30"
+            >
+            </div>
+            <div
+              class="absolute inset-0"
+              style="background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 16px 16px;"
+            >
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center p-4">
+              <pre
+                class="rounded bg-gray-900/40 p-3 sm:p-6 font-mono text-[11px] sm:text-[13px] text-gray-100 backdrop-blur-sm w-full max-w-[95%] sm:max-w-[90%] overflow-x-auto"><code><span class="text-indigo-400">const</span> <span class="text-amber-400">developer</span> = {'{'} 
+  name: <span class="text-green-400">'Fran Moreno'</span>,
+  role: <span class="text-green-400">'Frontend Developer'</span>,
+  skills: [
+    <span class="text-green-400">'React'</span>, 
+    <span class="text-green-400">'NextJS'</span>, 
+    <span class="text-green-400">'Astro'</span>
+  ],
+  experience: <span class="text-amber-400">15</span>,
+{'}'};
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,40 +1,74 @@
 ---
-const skills = [
-  { name: 'php' },
-  { name: 'mysql' },
-  { name: 'html5' },
-  { name: 'css3' },
-  { name: 'wordpress' },
-  { name: 'nodejs' },
-  { name: 'react' },
-  { name: 'nextjs' },
-  { name: 'astro' },
-  { name: 'vue' },
-  { name: 'nuxtjs' },
-  { name: 'strapi' },
-  { name: 'git' },
-  { name: 'github' },
-  { name: 'bash' },
-  { name: 'vercel' },
-  { name: 'supabase' },
-  { name: 'digitalocean' },
-  { name: 'cloudflare' },
-  { name: 'figma' }
-]
+const technologies = {
+  frontend: [
+    { name: 'react', label: 'React' },
+    { name: 'nextjs', label: 'Next.js' },
+    { name: 'astro', label: 'Astro' },
+    { name: 'vue', label: 'Vue' },
+    { name: 'nuxtjs', label: 'Nuxt.js' },
+    { name: 'html5', label: 'HTML5' },
+    { name: 'css3', label: 'CSS3' },
+    { name: 'tailwind', label: 'Tailwind CSS' }
+  ],
+  backend: [
+    { name: 'nodejs', label: 'Node.js' },
+    { name: 'php', label: 'PHP' },
+    { name: 'mysql', label: 'MySQL' },
+    { name: 'wordpress', label: 'WordPress' },
+    { name: 'strapi', label: 'Strapi' },
+    { name: 'supabase', label: 'Supabase' },
+    { name: 'postgresql', label: 'PostgreSQL' }
+  ],
+  devops: [
+    { name: 'git', label: 'Git' },
+    { name: 'github', label: 'GitHub' },
+    { name: 'bash', label: 'Bash' },
+    { name: 'vercel', label: 'Vercel' },
+    { name: 'cloudflare', label: 'Cloudflare' },
+    { name: 'digitalocean', label: 'DigitalOcean' },
+    { name: 'docker', label: 'Docker' }
+  ],
+  tools: [
+    { name: 'figma', label: 'Figma' },
+    { name: 'cursor', label: 'Cursor' },
+    { name: 'notion', label: 'Notion' },
+    { name: 'slack', label: 'Slack' }
+  ]
+}
+
+const categories = {
+  frontend: 'Frontend',
+  backend: 'Backend',
+  devops: 'DevOps',
+  tools: 'Herramientas'
+}
 ---
 
-<div class="grid grid-cols-4 md:grid-cols-5 gap-2 justify-center">
+<div class="grid gap-16">
   {
-    skills.map((skill) => (
-      <div class="iconcontainer mt-5 flex flex-col justify-center">
-        <img
-          src={'/svg/' + skill.name + '.svg'}
-          class="w-16 mx-auto"
-          width="50"
-          height="50"
-          alt={skill.name}
-        />
-        <small>{skill.name}</small>
+    Object.entries(technologies).map(([category, techs]) => (
+      <div>
+        <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-gray-100">
+          {categories[category]}
+        </h3>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8">
+          {techs.map((tech) => (
+            <div class="group flex flex-col items-center gap-2">
+              <div class="relative flex items-center justify-center w-16 h-16 rounded-xl bg-white dark:bg-gray-800/60 shadow-sm ring-1 ring-gray-900/5 dark:ring-gray-700/50 transition-all duration-200 group-hover:shadow-md dark:group-hover:shadow-indigo-500/10 group-hover:-translate-y-1 dark:group-hover:bg-gray-800">
+                <img
+                  src={'/svg/' + tech.name + '.svg'}
+                  class="w-10 h-10 transition-transform duration-200 group-hover:scale-110"
+                  width="40"
+                  height="40"
+                  alt={tech.label}
+                />
+              </div>
+              <span class="text-sm text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
+                {tech.label}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     ))
   }

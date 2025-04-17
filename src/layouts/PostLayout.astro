@@ -5,16 +5,106 @@ import '../styles/globals.css'
 
 const { title, description, pubDate, image } = Astro.props
 const date = new Date(pubDate)
+
+// Formato de fecha en español
+const dateFormatter = new Intl.DateTimeFormat('es-ES', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+})
 ---
 
 <Layout title={title} description={description} image={image} type="blog">
-  <article class="mt-10">
-    <div class="mx-auto prose lg:prose-xl dark:prose-invert">
-      <h1>{title}</h1>
-      {image && <img src={image} alt={title} />}
-      {pubDate && <time>🗓️ {date.toLocaleDateString()}</time>}
-      <hr />
-      <slot />
-    </div>
-  </article>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <article class="mx-auto max-w-3xl py-8 sm:py-16">
+      <header class="mb-8 sm:mb-12">
+        {
+          image && (
+            <div class="relative aspect-[2/1] mb-8 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 ring-1 ring-gray-900/5 dark:ring-gray-100/10">
+              <img
+                src={image}
+                alt={title}
+                class="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
+          )
+        }
+        <div class="space-y-4">
+          <h1
+            class="text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-gray-100 dark:via-gray-200 dark:to-gray-100 bg-clip-text text-transparent"
+          >
+            {title}
+          </h1>
+          {
+            pubDate && (
+              <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+                <time datetime={date.toISOString()}>
+                  {dateFormatter.format(date)}
+                </time>
+              </div>
+            )
+          }
+        </div>
+      </header>
+
+      <div
+        class="prose prose-lg dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-p:text-gray-600 dark:prose-p:text-gray-300 prose-a:text-indigo-600 dark:prose-a:text-indigo-300 hover:prose-a:text-indigo-500 dark:hover:prose-a:text-indigo-200 prose-strong:text-gray-900 dark:prose-strong:text-gray-200 prose-code:text-gray-900 dark:prose-code:text-gray-200 prose-pre:bg-gray-900 dark:prose-pre:bg-gray-800 prose-pre:text-gray-100 dark:prose-pre:text-gray-200 prose-img:rounded-2xl prose-hr:border-gray-200 dark:prose-hr:border-gray-800 max-w-none"
+      >
+        <slot />
+      </div>
+    </article>
+  </div>
 </Layout>
+
+<style>
+  /* Estilos adicionales para el contenido del post */
+  :global(.prose pre) {
+    @apply p-4 rounded-xl shadow-lg;
+  }
+
+  :global(.prose img) {
+    @apply rounded-xl shadow-lg dark:shadow-gray-900/30;
+  }
+
+  :global(.prose code:not(pre code)) {
+    @apply px-1.5 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 font-normal;
+  }
+
+  :global(.prose blockquote) {
+    @apply border-l-4 border-indigo-500 dark:border-indigo-400 bg-gray-50 dark:bg-gray-800/50 px-6 py-4 rounded-r-lg not-italic;
+  }
+
+  :global(.prose ul) {
+    @apply list-disc marker:text-indigo-500 dark:marker:text-indigo-400;
+  }
+
+  :global(.prose ol) {
+    @apply list-decimal marker:text-indigo-500 dark:marker:text-indigo-400;
+  }
+
+  :global(.prose table) {
+    @apply border-collapse border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden;
+  }
+
+  :global(.prose th) {
+    @apply bg-gray-100 dark:bg-gray-800 text-left px-4 py-2 border-b-2 border-gray-200 dark:border-gray-700;
+  }
+
+  :global(.prose td) {
+    @apply px-4 py-2 border border-gray-200 dark:border-gray-800;
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+const { class: className } = Astro.props
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  class={className}
+  viewBox="0 0 100 100"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="3"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- Hexágono base -->
+  <path
+    d="M50 10 L85 30 L85 70 L50 90 L15 70 L15 30 Z"
+    class="transition-all duration-300 ease-in-out"
+    stroke-width="2"
+    fill="currentColor"
+    fill-opacity="0.1"></path>
+
+  <!-- Código estilizado -->
+  <path
+    d="M35 40 L25 50 L35 60"
+    class="transition-all duration-300 ease-in-out"
+    stroke-width="4"></path>
+  <path
+    d="M65 40 L75 50 L65 60"
+    class="transition-all duration-300 ease-in-out"
+    stroke-width="4"></path>
+
+  <!-- Línea central -->
+  <path
+    d="M45 50 L55 50"
+    class="transition-all duration-300 ease-in-out"
+    stroke-width="4"></path>
+
+  <!-- Puntos de conexión -->
+  <circle cx="35" cy="40" r="2" class="fill-current"></circle>
+  <circle cx="65" cy="40" r="2" class="fill-current"></circle>
+  <circle cx="35" cy="60" r="2" class="fill-current"></circle>
+  <circle cx="65" cy="60" r="2" class="fill-current"></circle>
+
+  <!-- Detalles decorativos -->
+  <path
+    d="M25 35 L75 35"
+    class="transition-all duration-300 ease-in-out opacity-30"></path>
+  <path
+    d="M25 65 L75 65"
+    class="transition-all duration-300 ease-in-out opacity-30"></path>
+</svg>
