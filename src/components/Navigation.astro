@@ -1,0 +1,116 @@
+---
+import ThemeToggle from './ThemeToggle.astro'
+---
+
+<header
+  class="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-white/80 dark:bg-gray-900/90 border-b border-gray-200 dark:border-gray-800/60"
+>
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo y nombre -->
+      <a href="/" class="flex items-center gap-2">
+        <img src="/logo.svg" alt="Logo" class="w-8 h-8" />
+        <span
+          class="font-semibold text-lg bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-300"
+        >
+          Fran Moreno
+        </span>
+      </a>
+
+      <!-- Enlaces de navegación -->
+      <div class="hidden md:flex items-center gap-8">
+        <a
+          href="/blog"
+          class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-300 transition-colors"
+        >
+          Blog
+        </a>
+        <a
+          href="/proyectos"
+          class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-300 transition-colors"
+        >
+          Proyectos
+        </a>
+        <a
+          href="/sobre-mi"
+          class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-300 transition-colors"
+        >
+          Sobre mí
+        </a>
+      </div>
+
+      <!-- Botones de acción -->
+      <div class="flex items-center gap-4">
+        <ThemeToggle />
+        <a
+          href="mailto:fran@franmoreno.com"
+          class="hidden md:inline-flex btn-primary"
+        >
+          Contactar
+        </a>
+
+        <!-- Menú móvil -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/60 transition-colors"
+          aria-label="Abrir menú"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú móvil expandible -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+      <div class="flex flex-col gap-4">
+        <a
+          href="/blog"
+          class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-300 transition-colors"
+        >
+          Blog
+        </a>
+        <a
+          href="/proyectos"
+          class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-300 transition-colors"
+        >
+          Proyectos
+        </a>
+        <a
+          href="/sobre-mi"
+          class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-300 transition-colors"
+        >
+          Sobre mí
+        </a>
+        <a
+          href="mailto:fran@franmoreno.com"
+          class="btn-primary w-full text-center"
+        >
+          Contactar
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button')
+  const mobileMenu = document.getElementById('mobile-menu')
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden')
+    })
+  }
+</script>

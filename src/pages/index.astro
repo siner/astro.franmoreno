@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import Project from '../components/project.astro'
 import Post from '../components/post.astro'
 import Stack from '../components/stack.astro'
+import HeroSection from '../components/HeroSection.astro'
 
 import { getCollection } from 'astro:content'
 
@@ -15,81 +16,66 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
   title="Fran Moreno - Desarrollador Web"
   description="Web de Fran Moreno, Desarrollador Web"
 >
-  <div class="md:flex items-center container mx-auto gap-10">
-    <div class="mt-10 space-y-4 text-lg">
-      <h1 class="text-4xl font-bold mb-5">Hola 👋🏽</h1>
-      <p>
-        Soy <strong>Fran Moreno</strong>, Ingeniero informático con más de 15
-        años de experiencia como <strong>Desarrollador Web</strong>. Actualmente
-        centrado en el desarrollo Frontend con <strong>React</strong>
-        (Astro y NextJS).
-      </p>
-      <ul class="ml-5">
-        <li>
-          🚀 Cofundador de la empresa <a
-            class="underline"
-            target="_blank"
-            href="https://www.sozpic.com"
-            >Sozpic
-          </a>
-        </li>
-        <li>
-          🖥️ Senior React Developer en <a
-            class="underline"
-            target="_blank"
-            href="https://www.mineryreport.com"
-            >Minery Report
-          </a>
-        </li>
-        <li>
-          🎙️ Podcaster en <a
-            class="underline"
-            href="https://www.necesitounarma.com"
-            target="_blank"
-            >Necesito un Arma
-          </a>
-        </li>
-      </ul>
-      <p>
-        En esta web puedes encontrar mis últimos artículos y proyectos. Si
-        quieres contactar conmigo solo tienes que escribirme un email a <a
-          href="mailto:fran@franmoreno.com">fran@franmoreno.com</a
-        >.
-      </p>
-    </div>
-  </div>
+  <HeroSection />
 
-  <div class="container mx-auto mb-10 mt-10">
-    <div class="mt-10 md:mt-0 space-y-4">
-      <h2 class="text-4xl font-bold mb-5">Últimos artículos</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-        {
-          posts
-            .slice(0, 2)
-            .map((post) => (
-              <Post
-                url={'/blog/' + post.slug}
-                img={post.data.image}
-                title={post.data.title}
-                date={post.data.pubDate}
-              />
-            ))
-        }
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:max-w-none py-16 sm:py-24">
+      <div class="space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+            Últimos artículos
+          </h2>
+          <a
+            href="/blog"
+            class="text-sm font-semibold leading-6 text-indigo-600 dark:text-indigo-300 hover:text-indigo-500 dark:hover:text-indigo-200 transition-colors"
+          >
+            Ver todos <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          Explora mis últimas publicaciones sobre desarrollo web, tecnología y
+          experiencias.
+        </p>
+      </div>
+
+      <div class="mt-10">
+        <div class="grid gap-8 sm:grid-cols-2">
+          {
+            posts
+              .slice(0, 2)
+              .map((post) => (
+                <Post
+                  url={'/blog/' + post.slug}
+                  img={post.data.image}
+                  title={post.data.title}
+                  date={post.data.pubDate}
+                />
+              ))
+          }
+        </div>
       </div>
     </div>
-    <div class="mt-10 space-y-4">
-      <h2 class="text-4xl font-bold mb-5">Proyectos</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+    <div class="mx-auto max-w-2xl lg:max-w-none py-16 sm:py-24">
+      <div class="space-y-4">
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Proyectos</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          Una selección de mis proyectos personales y profesionales.
+        </p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <Project
           title="Mi web"
           github="https://github.com/siner/astro.franmoreno"
         >
           <p>
             Esta web, hecha con el framework <a
-              class="font-bold"
+              class="font-bold hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
               href="https://astro.build"
               target="_blank"
-              >Astro
+            >
+              Astro
             </a>
           </p>
         </Project>
@@ -102,15 +88,17 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
           <p>
             Web informativa sobre torneos de Poker en vivo en todos los casinos
             de España, desarrollada con el framework <a
-              class="font-bold"
+              class="font-bold hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
               href="https://nextjs.org/"
               target="_blank"
-              >NextJS
+            >
+              NextJS
             </a> y <a
-              class="font-bold"
+              class="font-bold hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
               href="https://supabase.com"
               target="_blank"
-              >Supabase
+            >
+              Supabase
             </a> como backend.
           </p>
         </Project>
@@ -124,19 +112,25 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
             Reloj para organizar torneos de poker en casa o con amigos, te
             permite definir la estructura de ciegas, el tiempo, los premios,
             etc... Desarrollado usando <a
-              class="font-bold"
+              class="font-bold hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
               href="https://nextjs.org/"
-              target="_blank">NextJS</a
+              target="_blank"
             >
+              NextJS
+            </a>
           </p>
         </Project>
       </div>
     </div>
   </div>
 
-  <div class="container mx-auto skills text-center">
-    <h2 class="text-4xl font-bold mb-5">Stack</h2>
-    <Stack />
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 sm:py-24">
+    <div class="mx-auto max-w-2xl lg:max-w-none text-center">
+      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl mb-10">
+        Stack Tecnológico
+      </h2>
+      <Stack />
+    </div>
   </div>
 </Layout>
 
