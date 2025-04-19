@@ -1,5 +1,6 @@
 ---
 import Layout from './Layout.astro'
+import Comments from '../components/Comments.astro'
 
 import '../styles/globals.css'
 
@@ -67,6 +68,7 @@ const dateFormatter = new Intl.DateTimeFormat('es-ES', {
         <slot />
       </div>
     </article>
+    <Comments />
   </div>
 </Layout>
 
