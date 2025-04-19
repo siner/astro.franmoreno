@@ -23,7 +23,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2",
-    "wrangler": "^3.0.0"
+    "wrangler": "^4.0.0"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.11",
