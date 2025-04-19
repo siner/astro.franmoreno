@@ -19,16 +19,16 @@ importers:
         version: 2.13.0
     devDependencies:
       '@astrojs/cloudflare':
-        specifier: ^12.5.0
+        specifier: ^12.2.1
         version: 12.5.0(@types/node@22.14.1)(astro@5.7.4(@types/node@22.14.1)(rollup@4.40.0)(typescript@5.6.2)(yaml@2.7.1))(yaml@2.7.1)
       '@astrojs/mdx':
-        specifier: ^4.2.4
+        specifier: ^4.0.7
         version: 4.2.4(astro@5.7.4(@types/node@22.14.1)(rollup@4.40.0)(typescript@5.6.2)(yaml@2.7.1))
       '@astrojs/react':
-        specifier: ^4.2.4
+        specifier: ^4.1.6
         version: 4.2.4(@types/node@22.14.1)(@types/react-dom@18.3.0)(@types/react@18.3.10)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(yaml@2.7.1)
       '@astrojs/sitemap':
-        specifier: ^3.3.0
+        specifier: ^3.2.1
         version: 3.3.0
       '@astrojs/tailwind':
         specifier: ^5.1.5
@@ -37,13 +37,13 @@ importers:
         specifier: ^0.5.8
         version: 0.5.15
       astro:
-        specifier: ^5.7.4
+        specifier: ^5.1.9
         version: 5.7.4(@types/node@22.14.1)(rollup@4.40.0)(typescript@5.6.2)(yaml@2.7.1)
       eslint-plugin-react-hooks:
         specifier: ^4.6.0
         version: 4.6.2(eslint@8.57.1)
       prettier-plugin-astro:
-        specifier: ^0.14.0
+        specifier: ^0.14.1
         version: 0.14.1
       react:
         specifier: ^18.2.0
@@ -68,9 +68,6 @@ packages:
     resolution: {integrity: sha512-rBZLC7uKsqd+qSdVWWUt2NYYeg9RnrT+npaa/qfSBRD8++yza29wsE//PYtRvM6p5wYL0sGfMlflTi1eWPyUlw==}
     peerDependencies:
       astro: ^5.0.0
-
-  '@astrojs/compiler@2.10.3':
-    resolution: {integrity: sha512-bL/O7YBxsFt55YHU021oL+xz+B/9HvGNId3F9xURN16aeqDK9juHGktdkCSXz+U4nqFACq6ZFvWomOzhV+zfPw==}
 
   '@astrojs/compiler@2.11.0':
     resolution: {integrity: sha512-zZOO7i+JhojO8qmlyR/URui6LyfHJY6m+L9nwyX5GiKD78YoRaZ5tzz6X0fkl+5bD3uwlDHayf6Oe8Fu36RKNg==}
@@ -2161,8 +2158,8 @@ packages:
     resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
     engines: {node: ^14.15.0 || >=16.0.0}
 
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+  prettier@3.5.3:
+    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2884,8 +2881,6 @@ snapshots:
       - tsx
       - utf-8-validate
       - yaml
-
-  '@astrojs/compiler@2.10.3': {}
 
   '@astrojs/compiler@2.11.0': {}
 
@@ -5358,11 +5353,11 @@ snapshots:
 
   prettier-plugin-astro@0.14.1:
     dependencies:
-      '@astrojs/compiler': 2.10.3
-      prettier: 3.3.3
+      '@astrojs/compiler': 2.11.0
+      prettier: 3.5.3
       sass-formatter: 0.7.9
 
-  prettier@3.3.3: {}
+  prettier@3.5.3: {}
 
   printable-characters@1.0.42: {}
 
