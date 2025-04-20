@@ -134,6 +134,145 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
       <Stack />
     </div>
   </div>
+
+  <!-- CTA Section -->
+  <div class="relative isolate">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 sm:py-24">
+      <div class="mx-auto max-w-2xl lg:max-w-4xl">
+        <div
+          class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-indigo-500 via-indigo-600 to-purple-500 dark:from-indigo-600 dark:via-indigo-700 dark:to-purple-600"
+        >
+          <div
+            class="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"
+          >
+          </div>
+          <div class="relative px-8 py-16 md:px-12 md:py-20">
+            <figure>
+              <blockquote
+                class="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9"
+              >
+                <p class="mb-8">
+                  ¿Necesitas ayuda para mejorar tu proyecto web o formar a tu
+                  equipo técnico?
+                </p>
+                <p>
+                  Agenda una consultoría gratuita y descubre cómo puedo ayudarte
+                  a alcanzar tus objetivos.
+                </p>
+              </blockquote>
+              <div
+                class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+              >
+                <button
+                  data-cal-link="franmoreno/consultoria"
+                  data-cal-config='{"layout":"month_view"}'
+                  class="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-indigo-600 shadow-sm hover:bg-indigo-50 transition-colors duration-300"
+                >
+                  Agendar reunión gratuita
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </button>
+                <a
+                  href="/servicios"
+                  class="inline-flex items-center gap-2 rounded-full bg-indigo-400/20 backdrop-blur-sm px-8 py-4 text-base font-semibold text-white hover:bg-indigo-400/30 transition-colors duration-300"
+                >
+                  Ver servicios
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
 
-<style></style>
+<script is:inline src="https://cal.com/embed.js"></script>
+<script is:inline>
+  ;(function (C, A, L) {
+    let p = function (a, ar) {
+      a.q.push(ar)
+    }
+    let d = C.document
+    C.Cal =
+      C.Cal ||
+      function () {
+        let cal = C.Cal
+        let ar = arguments
+        if (!cal.loaded) {
+          cal.ns = {}
+          cal.q = cal.q || []
+          d.head.appendChild(d.createElement('script')).src = A
+          cal.loaded = true
+        }
+        if (ar[0] === L) {
+          const api = function () {
+            p(api, arguments)
+          }
+          const namespace = ar[1]
+          api.q = api.q || []
+          typeof namespace === 'string'
+            ? (cal.ns[namespace] = api) && p(api, ar)
+            : p(cal, ar)
+          return
+        }
+        p(cal, ar)
+      }
+  })(window, 'https://cal.com/embed.js', 'init')
+
+  // Inicializar Cal.com
+  Cal('init')
+
+  // Configurar el tema
+  const updateCalTheme = () => {
+    const isDark = document.documentElement.classList.contains('dark')
+    Cal('ui', { theme: isDark ? 'dark' : 'light' })
+  }
+
+  // Observar cambios en el tema
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.attributeName === 'class') {
+        updateCalTheme()
+      }
+    })
+  })
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['class']
+  })
+
+  // Configurar tema inicial cuando el DOM esté listo
+  document.addEventListener('DOMContentLoaded', updateCalTheme)
+</script>
+
+<style is:global>
+  /* Asegurar que el iframe de Cal.com herede el tema */
+  iframe[src*='cal.com'] {
+    background-color: transparent !important;
+  }
+</style>
