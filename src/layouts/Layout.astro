@@ -1,8 +1,15 @@
 ---
 const { title, description, image, type } = Astro.props
 
-const imageurl = new URL(image, Astro.site)
-const url = new URL(Astro.url.pathname, Astro.site)
+// Configurar la imagen por defecto y la URL del sitio
+const defaultImage = '/franmoreno.jpg'
+const siteUrl = 'https://franmoreno.com'
+
+// Determinar la imagen a usar
+const socialImage = image
+  ? new URL(image, Astro.site)
+  : new URL(defaultImage, Astro.site)
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
@@ -19,6 +26,7 @@ import '../styles/globals.css'
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
 
     <link
       rel="alternate"
@@ -27,22 +35,26 @@ import '../styles/globals.css'
       href={`${Astro.site}rss.xml`}
     />
 
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Fran Moreno" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={url} />
-    {
-      type && type === 'blog' && (
-        <>
-          <meta property="og:type" content="article" />
-          <meta property="og:image" content={imageurl} />
-          <meta name="twitter:image" content={imageurl} />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta property="twitter:domain" content="franmoreno.com" />
-        </>
-      )
-    }
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={socialImage} />
+    <meta
+      property="og:type"
+      content={type === 'blog' ? 'article' : 'website'}
+    />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@siner" />
     <meta name="twitter:creator" content="@siner" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+
     <script
       defer
       src="https://cloud.umami.is/script.js"
