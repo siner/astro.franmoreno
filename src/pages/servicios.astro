@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import CalendarScript from '../components/CalendarScript.astro'
 ---
 
 <Layout
@@ -443,68 +444,4 @@ import Layout from '../layouts/Layout.astro'
   </section>
 </Layout>
 
-<script is:inline>
-  ;(function (C, A, L) {
-    let p = function (a, ar) {
-      a.q.push(ar)
-    }
-    let d = C.document
-    C.Cal =
-      C.Cal ||
-      function () {
-        let cal = C.Cal
-        let ar = arguments
-        if (!cal.loaded) {
-          cal.ns = {}
-          cal.q = cal.q || []
-          d.head.appendChild(d.createElement('script')).src = A
-          cal.loaded = true
-        }
-        if (ar[0] === L) {
-          const api = function () {
-            p(api, arguments)
-          }
-          const namespace = ar[1]
-          api.q = api.q || []
-          typeof namespace === 'string'
-            ? (cal.ns[namespace] = api) && p(api, ar)
-            : p(cal, ar)
-          return
-        }
-        p(cal, ar)
-      }
-  })(window, 'https://cal.com/embed.js', 'init')
-
-  // Inicializar Cal.com
-  Cal('init')
-
-  // Configurar el tema
-  const updateCalTheme = () => {
-    const isDark = document.documentElement.classList.contains('dark')
-    Cal('ui', { theme: isDark ? 'dark' : 'light' })
-  }
-
-  // Observar cambios en el tema
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      if (mutation.attributeName === 'class') {
-        updateCalTheme()
-      }
-    })
-  })
-
-  observer.observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ['class']
-  })
-
-  // Configurar tema inicial cuando el DOM esté listo
-  document.addEventListener('DOMContentLoaded', updateCalTheme)
-</script>
-
-<style is:global>
-  /* Asegurar que el iframe de Cal.com herede el tema */
-  iframe[src*='cal.com'] {
-    background-color: transparent !important;
-  }
-</style>
+<CalendarScript />
