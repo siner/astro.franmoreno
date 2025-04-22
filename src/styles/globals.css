@@ -46,7 +46,7 @@
 }
 
 .toggle-wrapper {
-  @apply w-16 block mx-auto;
+  @apply w-16 block;
 }
 
 .toggle {
