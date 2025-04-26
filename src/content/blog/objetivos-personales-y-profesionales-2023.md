@@ -2,10 +2,11 @@
 title: Objetivos personales y profesionales para 2023
 description: Cómo uso GTD como mi sistema de gestión de tareas para establecer objetivos y tener una mejor visión de lo que quiero hacer en mi vida.
 author: Fran Moreno
-pubDate: 2022-12-17T09:30:42.113Z
-date: 2022-12-17
-heroImage: /blog/objetivos-personales-y-profesionales-2023.jpg
-image: /blog/objetivos-personales-y-profesionales-2023.jpg
+pubDate: '2022-12-17T09:30:42.113Z'
+heroImage: '/blog/objetivos-personales-y-profesionales-2023.jpg'
+heroAlt: 'Objetivos personales y profesionales para 2023'
+tags: ['Objetivos', 'GTD', 'Productividad']
+draft: false
 ---
 
 Una de las cosas que empecé a hacer desde que uso [GTD como mi sistema de gestión](https://franmoreno.com/blog/gestionar-vida-notion-metodologia-gtd/) de tareas es establecer objetivos, para tener una visión de alto nivel de lo que quiero hacer en mi vida y en mi carrera profesional.

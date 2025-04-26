@@ -1,12 +1,21 @@
 ---
 title: '3 herramientas que me están ayudando a ser más productivo como desarrollador'
-pubDate: 2025-04-17T00:00:00.000Z
-date: 2025-04-17
-author: Fran Moreno
-type: default
-heroImage: /blog/herramientas-desarrollo-2025.jpg
-image: /blog/herramientas-desarrollo-2025.jpg
+pubDate: '2025-04-17T00:00:00.000Z'
+author: 'Fran Moreno'
+heroImage: '/blog/herramientas-desarrollo-2025.jpg'
+heroAlt: 'Herramientas de desarrollo'
 description: 'Next.js, Supabase y Cursor me están permitiendo trabajar más rápido, con menos fricción y mejor estructura. Aquí te cuento cómo las uso.'
+tags:
+  [
+    'Herramientas',
+    'Fullstack',
+    'Next.js',
+    'Supabase',
+    'Cursor',
+    'Productividad',
+    'IA'
+  ]
+draft: false
 ---
 
 Estos meses estoy a tope desarrollando un SaaS de gestión para hostelería y como siempre, trasteando con ideas y mejoras para mi web personal. Para no volverme loco entre contextos, clientes y código, me apoyo en algunas herramientas que me están haciendo la vida más fácil.

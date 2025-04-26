@@ -1,17 +1,35 @@
 ---
-import Layout from '../layouts/Layout.astro'
-
-import Post from '../components/post.astro'
-
 import { getCollection } from 'astro:content'
+import Layout from '../../layouts/Layout.astro'
+import Post from '../../components/post.astro'
 
-const posts = await getCollection('blog')
+export async function getStaticPaths() {
+  const allPosts = await getCollection('blog')
 
+  const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.data.tags.includes(tag)
+    )
+    return {
+      params: { tag },
+      props: { posts: filteredPosts }
+    }
+  })
+}
+
+const { tag } = Astro.params
+const { posts } = Astro.props
+
+// Ordenar posts por fecha de publicación descendente
 posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
 ---
 
-<Layout title="Blog - Fran Moreno" description="Blog de Fran Moreno">
-  <!-- Hero Section -->
+<Layout
+  title={`Artículos etiquetados con: "${tag}"`}
+  description={`Listado de artículos del blog etiquetados con ${tag}`}
+>
   <section class="relative overflow-hidden py-16 sm:py-24">
     <div class="absolute inset-0 -z-10">
       <div
@@ -26,29 +44,32 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
 
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:max-w-none">
-        <h1
-          class="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 dark:from-white dark:via-gray-200 dark:to-gray-300 bg-clip-text text-transparent mb-8"
+        <p
+          class="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400 mb-2"
         >
-          Blog
+          Blog / Etiqueta
+        </p>
+        <h1
+          class="text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 dark:from-white dark:via-gray-200 dark:to-gray-300 bg-clip-text text-transparent"
+        >
+          {tag}
         </h1>
         <p
           class="mt-6 text-lg leading-8 text-gray-800 dark:text-gray-200 max-w-2xl"
         >
-          Artículos sobre desarrollo web, tecnología y experiencias personales.
-          Principalmente centrado en React, Next.js, Astro y el ecosistema
-          JavaScript.
+          Mostrando artículos etiquetados con "{tag}". Explora contenido
+          relacionado con este tema.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Posts Grid -->
-  <section class="mx-auto max-w-7xl px-6 lg:px-8 -mt-12">
+  <section class="mx-auto max-w-7xl px-6 lg:px-8 -mt-12 mb-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {
         posts.map((post) => (
           <Post
-            url={'/blog/' + post.slug}
+            url={`/blog/${post.slug}`}
             heroImage={post.data.heroImage}
             heroAlt={post.data.altImage}
             title={post.data.title}
@@ -58,17 +79,14 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
         ))
       }
     </div>
-
     {
       posts.length === 0 && (
         <div class="text-center py-12">
           <p class="text-gray-600 dark:text-gray-400">
-            No hay artículos publicados aún.
+            No se encontraron artículos con esta etiqueta.
           </p>
         </div>
       )
     }
   </section>
 </Layout>
-
-<style></style>

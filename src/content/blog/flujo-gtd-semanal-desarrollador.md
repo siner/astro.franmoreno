@@ -1,12 +1,12 @@
 ---
 title: 'Mi Flujo GTD Semanal como Desarrollador: Herramientas y Rutinas para Mantener a Raya Proyectos Personales y Profesionales'
-pubDate: 2025-04-19T00:00:00.000Z
-date: 2025-04-19
-author: Fran Moreno
-type: default
-heroImage: /blog/gtd-workflow-developer.jpg
-image: /blog/gtd-workflow-developer.jpg
+pubDate: '2025-04-19T00:00:00.000Z'
+author: 'Fran Moreno'
+heroImage: '/blog/gtd-workflow-developer.jpg'
+heroAlt: 'GTD Workflow Developer'
 description: 'Descubre cómo implemento GTD (Getting Things Done) en mi rutina semanal como desarrollador para mantener el control de proyectos personales y profesionales, reducir el estrés y aumentar la productividad.'
+tags: ['GTD', 'Productividad', 'Organización', 'Todoist', 'Notion']
+draft: false
 ---
 
 ¿Te suena esta imagen? Lunes por la mañana. Tienes abierto Cursor/VSCode/WebStorm/etc con varios proyectos, veinte pestañas en el navegador (documentación, Stack Overflow, Jira, GitHub, ChatGPT, el build fallido de anoche...), Slack/Teams/Gather explotando con notificaciones, el email pidiendo atención y, en algún lugar de tu mente, la vaga idea de ese _side-project_ que querías empezar o ese curso de Kubernetes que te prometiste hacer. Estás en modo bombero, apagando fuegos, respondiendo a lo urgente, pero con la constante sensación de que las cosas importantes – las que realmente te hacen avanzar profesional y personalmente – se quedan atrás. Te sientes agobiado, quizás un poco quemado, y la idea de "perder el control" no es una metáfora, es tu realidad diaria.

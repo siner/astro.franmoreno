@@ -1,12 +1,20 @@
 ---
 title: Moviendo mis side projects a Cloudflare
-pubDate: 2024-05-13T09:24:48.463Z
-type: default
-author: Fran Moreno
-date: 2024-05-13
+pubDate: '2024-05-13T09:24:48.463Z'
+author: 'Fran Moreno'
 description: Moviendo los proyectos en los que estoy trabajando de Vercel a Cloudflare Pages
-heroImage: /blog/Screenshot_2022-01-27_at_10.png
-image: /blog/Screenshot_2022-01-27_at_10.png
+heroImage: '/blog/Screenshot_2022-01-27_at_10.png'
+heroAlt: 'Cloudflare Pages'
+tags:
+  [
+    'Cloudflare',
+    'Hosting',
+    'Despliegue',
+    'Vercel',
+    'Rendimiento',
+    'Side Projects'
+  ]
+draft: false
 ---
 
 Desde hace tiempo vengo usando Vercel para el despliegue de mis proyectos frontend (sigo usándolo) pero últimamente estoy migrando algunos de los proyectos en los que estoy trabajando al entorno Cloudflare, usando tanto Cloudflare Pages como Cloudflare Workers y estoy muy contento.

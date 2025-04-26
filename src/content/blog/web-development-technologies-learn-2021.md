@@ -2,10 +2,11 @@
 title: Web development technologies I want to learn in 2021
 description: Here is a list of web technologies and languages I want to learn in 2021
 author: Fran Moreno
-pubDate: 2021-03-07T09:31:15.378Z
-date: 2021-03-07
-heroImage: /blog/web-development-technologies-learn-2021.jpg
-image: /blog/web-development-technologies-learn-2021.jpg
+pubDate: '2021-03-07T09:31:15.378Z'
+heroImage: '/blog/web-development-technologies-learn-2021.jpg'
+heroAlt: 'Web development technologies I want to learn in 2021'
+tags: ['Aprendizaje', 'Desarrollo Web', 'React', 'Tailwind']
+draft: false
 ---
 
 Last years I've found myself reading about a lot of technologies and programming languages, understanding them, and knowing how to defend or write about them in technical proposals. But never digging into them and learning. It was ok for me with my long WordPress knowledge (more than 10 years working with WordPress, improving myself, and doing very interesting projects) and knowing Laravel at a medium level.

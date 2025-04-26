@@ -1,12 +1,12 @@
 ---
 title: Introducción a Cloudflare Workers
-pubDate: 2024-05-15T14:12:53.895Z
-date: 2024-05-15
-author: Fran Moreno
-type: default
-heroImage: /blog/cloudflare_workers.jpg
-image: /blog/cloudflare_workers.jpg
+pubDate: '2024-05-15T14:12:53.895Z'
+author: 'Fran Moreno'
+heroImage: '/blog/cloudflare_workers.jpg'
+heroAlt: 'Cloudflare Workers'
 description: Descubre cómo empezar a usar Cloudflare Workers. Aprende sobre sus beneficios, casos de uso y cómo mejorar el rendimiento de tus proyectos
+tags: ['Cloudflare', 'Serverless', 'JavaScript', 'Rendimiento']
+draft: false
 ---
 
 ## ¿Qué son los Cloudflare Workers?
@@ -40,7 +40,7 @@ A continuación, los pasos que tienes que dar para empezar con Cloudflare Worker
 
 1. **Registro y Configuración**: Regístrate en Cloudflare (si es que no lo has hecho ya...) y añade tu dominio. En el panel de control, navega hasta la sección de Workers.
 2. **Crear un Worker**: Haz clic en "Crear un Worker". Cloudflare te proporcionará una interfaz para escribir y probar tu código.
-3. **Escribir Código**: Utiliza JavaScript para escribir tu lógica. Por ejemplo, un Worker sencillo para responder con un mensaje “Hello World” se vería así:
+3. **Escribir Código**: Utiliza JavaScript para escribir tu lógica. Por ejemplo, un Worker sencillo para responder con un mensaje "Hello World" se vería así:
 
 ```js
 addEventListener('fetch', (event) => {
@@ -88,7 +88,7 @@ Este comando creará un directorio llamado my-first-worker con una plantilla bá
 
 ### Paso 4: Modificar el Código del Worker
 
-Navega al directorio del proyecto recién creado y abre el archivo index.js en tu editor de texto favorito. Aquí es donde puedes escribir la lógica de tu Worker. Por ejemplo, para responder con un mensaje “Hello World” podemos usar el mismo código del principio del artículo.
+Navega al directorio del proyecto recién creado y abre el archivo index.js en tu editor de texto favorito. Aquí es donde puedes escribir la lógica de tu Worker. Por ejemplo, para responder con un mensaje "Hello World" podemos usar el mismo código del principio del artículo.
 
 ### Paso 5: Prueba Local
 

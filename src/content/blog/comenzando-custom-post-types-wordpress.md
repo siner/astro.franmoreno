@@ -2,10 +2,11 @@
 title: Comenzando con los Custom Post Types en WordPress
 description: Comenzando con los Custom Post Types en WordPress
 author: Fran Moreno
-pubDate: 2019-02-15T09:29:33.628Z
-date: 2019-02-15
-heroImage: /blog/wordpress.jpg
-image: /blog/wordpress.jpg
+pubDate: '2019-02-15T09:29:33.628Z'
+heroImage: '/blog/wordpress.jpg'
+heroAlt: 'WordPress'
+tags: ['WordPress', 'Custom Post Types', 'PHP', 'Desarrollo Web', 'CMS']
+draft: false
 ---
 
 Un aspecto importante en **WordPress** son los [Custom Post Types](http://codex.wordpress.org/Function_Reference/register_post_type) , una característica que se incluyó a partir de la versión 3 de este CMS. Como la mayoría sabe, en WordPress hay varios tipos de posts nativos, los posts normales, como este artículo, una página estática, los archivos adjuntos (imágenes y demás) y las barras de navegación. Cada una de estas cosas tiene un tipo de post concreto en la tabla `wp_posts`.

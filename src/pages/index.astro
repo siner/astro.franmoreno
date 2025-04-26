@@ -49,9 +49,11 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
               .map((post) => (
                 <Post
                   url={'/blog/' + post.slug}
-                  img={post.data.image}
+                  heroImage={post.data.heroImage}
+                  heroAlt={post.data.altImage}
                   title={post.data.title}
                   date={post.data.pubDate}
+                  tags={post.data.tags}
                 />
               ))
           }
