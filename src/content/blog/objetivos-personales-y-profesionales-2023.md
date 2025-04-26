@@ -9,7 +9,7 @@ tags: ['Objetivos', 'GTD', 'Productividad']
 draft: false
 ---
 
-Una de las cosas que empecé a hacer desde que uso [GTD como mi sistema de gestión](https://franmoreno.com/blog/gestionar-vida-notion-metodologia-gtd/) de tareas es establecer objetivos, para tener una visión de alto nivel de lo que quiero hacer en mi vida y en mi carrera profesional.
+Una de las cosas que empecé a hacer desde que uso [GTD como mi sistema de gestión](https://franmoreno.com/blog/gestionar-vida-notion-metodologia-gtd/) de tareas es establecer objetivos, para tener una visión de alto nivel de lo que quiero hacer en mi vida y en mi carrera profesional. _Mi [flujo semanal GTD](/blog/flujo-gtd-semanal-desarrollador/) me ayuda a revisar y mantener estos objetivos._
 
 ## Objetivos cumplidos 2021-2022
 

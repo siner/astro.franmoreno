@@ -17,7 +17,7 @@ tags:
 draft: false
 ---
 
-Desde hace tiempo vengo usando Vercel para el despliegue de mis proyectos frontend (sigo usándolo) pero últimamente estoy migrando algunos de los proyectos en los que estoy trabajando al entorno Cloudflare, usando tanto Cloudflare Pages como Cloudflare Workers y estoy muy contento.
+Desde hace tiempo vengo usando Vercel para el despliegue de mis proyectos frontend (sigo usándolo) pero últimamente estoy migrando algunos de los proyectos en los que estoy trabajando al entorno Cloudflare, usando tanto Cloudflare Pages como [Cloudflare Workers](https://workers.cloudflare.com/) (sobre los que puedes leer [una introducción aquí](/blog/introduccion-a-cloudflare-workers/)) y estoy muy contento.
 
 En este artículo, exploraremos las ventajas de Cloudflare Pages respecto a Vercel.
 
@@ -43,4 +43,4 @@ Cloudflare Pages ofrece un plan gratuito generoso que incluye un alto límite de
 
 ## Desventajas
 
-Obviamente, no todo puede ser perfecto, sobre todo si trabajamos con NextJS, Vercel ofrece mucho mejor soporte para este Framework (lo han desarrollado ellos...) por lo que algunas de las ventajas y novedades que ofrecen no estarán disponibles cuando despliegas un proyecto con Cloudflare Pages, pero para la mayoría de proyectos es una solución más que interesante.
+Obviamente, no todo puede ser perfecto, sobre todo si trabajamos con [NextJS](https://nextjs.org/), Vercel ofrece mucho mejor soporte para este Framework (lo han desarrollado ellos...) por lo que algunas de las ventajas y novedades que ofrecen no estarán disponibles cuando despliegas un proyecto con Cloudflare Pages, pero para la mayoría de proyectos es una solución más que interesante.

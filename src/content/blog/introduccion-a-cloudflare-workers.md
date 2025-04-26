@@ -17,7 +17,7 @@ Cloudflare Workers es una plataforma de computación serverless que permite a lo
 
 Los Cloudflare Workers se basan en el estándar de la WebAssembly (WASM), lo que les permite ejecutar código con gran eficiencia y seguridad. Aquí tienes un desglose de cómo funcionan:
 
-1. **Distribución Global**: Cloudflare tiene una red global con más de 200 centros de datos. Cuando despliegas un Worker, tu código se replica en todos estos centros de datos.
+1. **Distribución Global**: Cloudflare tiene una red global con más de 200 centros de datos. Cuando despliegas un Worker, tu código se replica en todos estos centros de datos. _Este mismo principio es el que aprovecha [Cloudflare Pages](/blog/moviendo-mis-side-projects-a-cloudflare/) para servir sitios estáticos rápidamente._
 2. **Ejecución en el Borde**: En lugar de enviar todas las solicitudes a un servidor central, los Workers procesan las solicitudes en el servidor más cercano al usuario, mejorando la velocidad de respuesta.
 3. **Escalabilidad Automática**: Los Workers escalan automáticamente para manejar cualquier cantidad de tráfico sin necesidad de que te preocupes por la infraestructura.
 

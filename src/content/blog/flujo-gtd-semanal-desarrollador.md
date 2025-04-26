@@ -13,7 +13,7 @@ draft: false
 
 El problema es real: como desarrolladores, manejamos un montón de cosas complejas. Proyectos del trabajo con fechas de entrega ajustadas, bugs inesperados que echan por tierra los planes, la necesidad constante de aprender nuevas tecnologías, mantener nuestros propios proyectos o contribuciones open-source, y además, intentar tener una vida fuera del código. ¿Cómo gestionar todo esto sin que la cabeza explote? ¿Cómo asegurarnos de que dedicamos tiempo a construir el futuro y no solo a parchear el presente?
 
-Aquí es donde entra en juego GTD (Getting Things Done). Pero no te asustes, no vengo a venderte un sistema rígido y complicado. Para mí, GTD es una caja de herramientas mentales y una filosofía con ideas clave. Y una de las más potentes, la que me devuelve la cordura semana tras semana, es la **Revisión Semanal**.
+Aquí es donde entra en juego GTD (Getting Things Done). Pero no te asustes, no vengo a venderte un sistema rígido y complicado. Para mí, GTD es una caja de herramientas mentales y una filosofía con ideas clave _(si quieres una introducción, puedes leer [este otro post](/blog/gestionar-vida-notion-metodologia-gtd/))_. Y una de las más potentes, la que me devuelve la cordura semana tras semana, es la **Revisión Semanal**.
 
 En este artículo, quiero compartir contigo mi sistema personal y práctico de revisión semanal GTD, adaptado específicamente a los líos que tenemos como desarrolladores. Te contaré mi rutina, las herramientas concretas que uso (mi "stack" de productividad) y cómo las uno para mantenerme centrado, reducir el estrés y asegurar que tanto mi trabajo como mis proyectos personales avanzan de forma constante.
 

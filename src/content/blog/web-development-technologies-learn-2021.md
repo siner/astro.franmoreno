@@ -44,3 +44,5 @@ This is a React framework to work with WordPress, it allows you to use a WordPre
 I'm interested in this project because is a good way to improve the two basic parts of a common web project (frontend part on react or VUE, backend part on Laravel or Rails)
 
 There are much more technologies and projects I want to dig into (Jamstack, Jest, ReactNative, StoryBook...) but I don't want to put myself in a rush or give me more pressure than I need.
+
+_If you want to see how my stack has evolved, check out my thoughts on choosing between [Next.js (React-based) and Astro](/blog/experiencia-nextjs-vs-astro-proyectos-personales/) in 2025._

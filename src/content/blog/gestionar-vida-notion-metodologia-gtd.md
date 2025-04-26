@@ -47,4 +47,4 @@ O por ejemplo, si una tarea consiste en preparar un documento de requisitos para
 
 Para implementar el sistema en **Notion** me he ayudado de una serie de vídeos de [Rubén Loan](https://www.rubenloan.com/) ([Serie de GTD y Notion](https://www.youtube.com/watch?v=911ZGBQiKyc&list=PLWji3OEqhByRuAcNSpebAVG3mbNhGlPEm)) que me sirvieron para perder el miedo inicial a la herramienta (cómo empezar, cómo se crean secciones, bases de datos…)
 
-En otro artículo (este se está alargando más de la cuenta) explicaré con más detalle todo ese proceso, por si a alguien más le puede servir.
+En otro artículo (este se está alargando más de la cuenta) explicaré con más detalle todo ese proceso, por si a alguien más le puede servir. _Puedes leer sobre mi flujo semanal GTD como desarrollador [aquí](/blog/flujo-gtd-semanal-desarrollador/)_.

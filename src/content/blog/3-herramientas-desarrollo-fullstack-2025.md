@@ -30,6 +30,8 @@ Next.js se ha convertido en mi framework principal para casi todo lo que implica
 
 Entre las rutas con app router, el sistema de APIs integrado, y la posibilidad de hacer SSR o ISR según lo que necesites tengo todo lo que necesito. Me da estructura sin limitarme.
 
+_Si quieres profundizar en por qué elijo Next.js (y cuándo prefiero Astro), puedes leer [mi comparativa aquí](/blog/experiencia-nextjs-vs-astro-proyectos-personales/)_.
+
 Y lo mejor: puedo centrarme en el producto, no en reinventar la rueda cada vez.
 
 ---
