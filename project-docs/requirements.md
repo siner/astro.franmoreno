@@ -23,6 +23,7 @@ description: 'Descripción breve del post'
 - Ubicación: `src/content/blog/`
 - Nombre de archivo: kebab-case descriptivo
 - Imágenes destacadas: almacenadas en `/public/blog/`
+- Se permite la publicación de artículos personales y de bienestar, como el nuevo post sobre jardinería y crecimiento personal
 
 ## Características del Blog
 

@@ -3,6 +3,7 @@
 ## Hitos y Registros de Cambios
 
 - **2024-07-27:**
+  - Publicado nuevo artículo personal: "De código a cultivo: cómo descubrí mi pasión por las plantas".
   - Añadido nuevo artículo al blog: "Mi Experiencia Real: Cuándo elijo Next.js y cuándo Astro para mis proyectos personales".
   - Refactorizado el frontmatter de todos los artículos del blog para cumplir con el schema definido en `src/content/config.ts`.
   - Añadida visualización de tags en las páginas de detalle de los artículos del blog.
