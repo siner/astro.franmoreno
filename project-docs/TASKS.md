@@ -19,6 +19,8 @@
 
 - [x] **Crear Sistema de Productos:** Implementar archivo de configuración centralizado para productos
 - [x] **Documentar Gestión de Productos:** Crear documentación para añadir nuevos productos
+- [x] **Crear Artículo Kit GTD:** Nuevo artículo promocionando el kit de organización semanal
+- [x] **Configurar Node.js para Cloudflare:** Solucionar problema de versión de Node.js en despliegue
 
 ## En Progreso
 

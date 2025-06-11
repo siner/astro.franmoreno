@@ -1,0 +1,17 @@
+# Configuración para Cloudflare Pages
+name = "astro-franmoreno"
+compatibility_date = "2024-12-15"
+
+[env.production]
+# Variables de entorno para producción si las necesitas
+# NODE_VERSION = "18.20.8"
+
+# Configuración de build para Pages
+[build]
+command = "npm run build"
+cwd = "."
+watch_dir = "src"
+
+# Variables de entorno
+[vars]
+NODE_VERSION = "18.20.8" 
