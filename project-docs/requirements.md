@@ -32,3 +32,26 @@ description: 'Descripción breve del post'
 - Soporte para imágenes y código resaltado
 - Optimización SEO
 - Diseño responsive
+
+## Características de Productos
+
+- Página dedicada de productos digitales (`/productos`)
+- Componente reutilizable `ProductCard` para mostrar productos
+- Integración con Gumroad para procesamiento de pagos
+- Sección de productos destacados en la página principal
+- Navegación actualizada con enlace a productos
+- Diseño responsive y consistente con el resto del sitio
+
+### Estructura de Productos
+
+Cada producto debe incluir:
+
+- ID único
+- Título y descripción
+- Precio (y precio original si hay descuento)
+- Imagen representativa
+- Lista de características/beneficios
+- Tags para categorización
+- Tamaño de descarga
+- URL de Gumroad para la compra
+- Flag de producto destacado (opcional)

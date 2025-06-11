@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro'
+import ProductCard from '../components/ProductCard.astro'
+import { products } from '../data/products'
+---
+
+<Layout
+  title="Productos Digitales - Fran Moreno"
+  description="Descubre mis productos digitales para mejorar tu productividad y organización personal. Kits, plantillas y herramientas diseñadas por un desarrollador para desarrolladores."
+>
+  <!-- Hero Section -->
+  <div
+    class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 dark:from-indigo-900/20"
+  >
+    <div class="mx-auto max-w-7xl px-6 pb-16 pt-10 sm:pb-24 lg:px-8 lg:pb-32">
+      <div class="mx-auto max-w-2xl text-center lg:max-w-4xl">
+        <h1
+          class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl"
+        >
+          Productos Digitales
+        </h1>
+        <p
+          class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+        >
+          Herramientas y recursos digitales diseñados para mejorar tu
+          productividad y organización personal. Cada producto está creado con
+          la experiencia de un desarrollador que entiende las necesidades reales
+          de los profesionales técnicos.
+        </p>
+        <div
+          class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <a
+            href="#productos"
+            class="rounded-md bg-indigo-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors"
+          >
+            Ver productos
+          </a>
+          <a
+            href="/blog"
+            class="text-base font-semibold leading-6 text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+          >
+            Leer el blog <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="mt-16 sm:mt-20">
+        <div class="mx-auto max-w-5xl">
+          <div
+            class="relative rounded-2xl bg-gray-900/5 dark:bg-gray-100/5 p-4 ring-1 ring-inset ring-gray-900/10 dark:ring-gray-100/10"
+          >
+            <img
+              src="/productos/hero-productos.jpg"
+              alt="Productos digitales de productividad"
+              class="w-full h-auto rounded-lg shadow-2xl ring-1 ring-gray-900/10 dark:ring-gray-100/10"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Productos Section -->
+  <div id="productos" class="mx-auto max-w-7xl px-6 lg:px-8 py-16 sm:py-24">
+    <div class="mx-auto max-w-2xl lg:max-w-none">
+      <div class="text-center">
+        <h2
+          class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+        >
+          Productos Disponibles
+        </h2>
+        <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+          Cada producto está diseñado para resolver problemas reales de
+          productividad y organización
+        </p>
+      </div>
+
+      <div
+        class="mt-16 grid gap-8 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
+      >
+        {products.map((product) => <ProductCard product={product} />)}
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="relative isolate overflow-hidden bg-gray-900 dark:bg-gray-800">
+    <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          ¿Tienes alguna pregunta?
+        </h2>
+        <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+          Si tienes dudas sobre algún producto o necesitas ayuda con la
+          implementación, no dudes en contactarme. Estoy aquí para ayudarte.
+        </p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <button
+            data-cal-link="franmoreno/consultoria"
+            data-cal-config='{"layout":"month_view"}'
+            class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-colors"
+          >
+            Agendar consulta gratuita
+          </button>
+          <a
+            href="/servicios"
+            class="text-sm font-semibold leading-6 text-white hover:text-gray-300 transition-colors"
+          >
+            Ver servicios <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -11,6 +11,7 @@ Este proyecto es un blog personal desarrollado con Astro, diseñado para compart
 - Establecer una presencia online profesional
 - Contribuir a la comunidad de desarrollo
 - Publicar reflexiones personales y artículos de bienestar, como el nuevo post sobre jardinería y crecimiento personal
+- Promocionar y vender productos digitales relacionados con productividad y desarrollo profesional
 
 ## Tecnologías Principales
 

@@ -4,6 +4,7 @@ import SwitchDark from './elements/switchDark'
 const navLinks = [
   { href: '/', text: 'Inicio' },
   { href: '/blog', text: 'Blog' },
+  { href: '/productos', text: 'Productos' },
   { href: '/servicios', text: 'Servicios' },
   { href: 'https://cv.franmoreno.com', text: 'CV' }
 ]

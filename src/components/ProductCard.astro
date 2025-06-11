@@ -1,0 +1,166 @@
+---
+import type { Product } from '../data/products'
+
+export interface Props {
+  product: Product
+}
+
+const { product } = Astro.props
+---
+
+<div
+  class="group relative flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg ring-1 ring-gray-200 dark:ring-gray-700 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
+>
+  {
+    product.featured && (
+      <div class="absolute top-4 left-4 z-10">
+        <span class="inline-flex items-center rounded-full bg-indigo-600 px-3 py-1 text-xs font-medium text-white">
+          Destacado
+        </span>
+      </div>
+    )
+  }
+
+  <!-- Imagen del producto -->
+  <div class="aspect-[4/3] w-full overflow-hidden bg-gray-100 dark:bg-gray-700">
+    <img
+      src={product.image}
+      alt={product.title}
+      class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+      loading="lazy"
+    />
+  </div>
+
+  <!-- Contenido del producto -->
+  <div class="flex flex-1 flex-col p-6">
+    <!-- Tags -->
+    <div class="mb-3 flex flex-wrap gap-2">
+      {
+        product.tags.map((tag) => (
+          <span class="inline-flex items-center rounded-md bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-700 dark:text-indigo-300">
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+
+    <!-- Título y descripción -->
+    <div class="flex-1">
+      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+        {product.title}
+      </h3>
+      <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+        {product.description}
+      </p>
+    </div>
+
+    <!-- Características principales -->
+    <div class="mb-6">
+      <h4 class="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+        ¿Qué incluye?
+      </h4>
+      <ul class="space-y-1">
+        {
+          product.features.slice(0, 4).map((feature) => (
+            <li class="flex items-start text-sm text-gray-600 dark:text-gray-300">
+              <svg
+                class="h-4 w-4 text-indigo-600 dark:text-indigo-400 mt-0.5 mr-2 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              {feature}
+            </li>
+          ))
+        }
+        {
+          product.features.length > 4 && (
+            <li class="text-sm text-gray-500 dark:text-gray-400 italic">
+              +{product.features.length - 4} características más...
+            </li>
+          )
+        }
+      </ul>
+    </div>
+
+    <!-- Información adicional -->
+    <div
+      class="mb-6 flex items-center justify-between text-sm text-gray-500 dark:text-gray-400"
+    >
+      <span class="flex items-center">
+        <svg
+          class="h-4 w-4 mr-1"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"
+          ></path>
+        </svg>
+        {product.downloadSize}
+      </span>
+      <span class="flex items-center">
+        <svg
+          class="h-4 w-4 mr-1"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+        Descarga instantánea
+      </span>
+    </div>
+
+    <!-- Precio y CTA -->
+    <div class="flex items-center justify-between">
+      <div class="flex items-baseline">
+        <span class="text-2xl font-bold text-gray-900 dark:text-white">
+          {product.price}
+        </span>
+        {
+          product.originalPrice && (
+            <span class="ml-2 text-lg text-gray-500 dark:text-gray-400 line-through">
+              {product.originalPrice}
+            </span>
+          )
+        }
+      </div>
+
+      <a
+        href={product.gumroadUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors"
+      >
+        Comprar ahora
+        <svg
+          class="h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+          ></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>

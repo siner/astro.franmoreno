@@ -71,12 +71,16 @@ src/
   │   └── blog/          # Posts del blog en MDX
   ├── components/        # Componentes de Astro y React
   │   ├── ui/           # Componentes de interfaz reutilizables
-  │   └── blog/         # Componentes específicos del blog
+  │   ├── blog/         # Componentes específicos del blog
+  │   └── ProductCard.astro  # Componente para mostrar productos
   ├── layouts/          # Plantillas de página
   ├── pages/            # Rutas y páginas
+  │   ├── productos.astro   # Página de productos digitales
+  │   └── ...
   └── styles/           # Estilos globales y configuración Tailwind
 public/
   ├── blog/             # Imágenes y assets de los posts
+  ├── productos/        # Imágenes de productos digitales
   └── assets/           # Assets globales
 ```
 
