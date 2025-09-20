@@ -39,6 +39,31 @@ export const products: Product[] = [
     featured: true,
     category: 'Productividad',
     launchDate: new Date('2024-12-01')
+  },
+  {
+    id: 'blocks-html-generator',
+    title: 'Blocks - Generador HTML',
+    description:
+      'Herramienta online que utiliza IA para generar bloques HTML con Tailwind CSS. Describe lo que necesitas y obtén código listo para usar.',
+    price: 'Gratis',
+    originalPrice: null,
+    image: '/productos/blocks-html-generator.jpg',
+    features: [
+      'Generación de HTML con IA',
+      'Código Tailwind CSS optimizado',
+      'Vista previa instantánea',
+      'Responsive por defecto',
+      'Múltiples categorías (cards, heros, forms)',
+      'Código semántico y accesible',
+      'Sin dependencias externas',
+      'Copiar y pegar directo'
+    ],
+    tags: ['IA', 'HTML', 'Tailwind', 'Herramientas', 'Generadores'],
+    downloadSize: 'Online',
+    gumroadUrl: 'https://blocks.franmoreno.com',
+    featured: true,
+    category: 'Herramientas',
+    launchDate: new Date('2025-09-20')
   }
   // Aquí se pueden añadir más productos en el futuro
 ]
