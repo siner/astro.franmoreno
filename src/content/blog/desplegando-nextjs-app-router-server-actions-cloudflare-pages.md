@@ -79,7 +79,7 @@ Vamos a crear una aplicación simple con un formulario que utilice Server Action
 Primero, vamos a modificar `src/app/page.tsx`:
 
 ```tsx
-import { ContactForm } from '@/components/ContactForm'
+import { ContactForm } from '@/components/contact-form'
 import { Suspense } from 'react'
 
 export default function Home() {
@@ -197,13 +197,13 @@ export async function submitAndRedirect(formData: FormData) {
 
 ### Creando el Componente del Formulario
 
-Crea `src/components/ContactForm.tsx`:
+Crea `src/components/contact-form.tsx`:
 
 ```tsx
 'use client'
 
 import { useFormState, useFormStatus } from 'react-dom'
-import { submitContactForm, type FormState } from '@/app/actions'
+import { submitContactForm, type FormState } from '@/app/actions/contact-form'
 
 const initialState: FormState = {
   message: '',
@@ -376,14 +376,15 @@ function SuccessContent({ searchParams }: { searchParams: { name?: string } }) {
   )
 }
 
-export default function SuccessPage({
+export default async function SuccessPage({
   searchParams
 }: {
-  searchParams: { name?: string }
+  searchParams: Promise<{ name?: string }>
 }) {
+  const params = await searchParams
   return (
     <Suspense fallback={<div>Cargando...</div>}>
-      <SuccessContent searchParams={searchParams} />
+      <SuccessContent searchParams={params} />
     </Suspense>
   )
 }
@@ -563,7 +564,7 @@ npm run preview
 Este comando:
 
 1. Construye tu aplicación con el adaptador de OpenNext
-2. La sirve localmente usando el runtime de `workerd` (mismo que usa Cloudflare)
+2. La sirve localmente usando el runtime de `workers` (mismo que usa Cloudflare)
 3. Te permite probar Server Actions y otras características específicas de Cloudflare
 
 ## Paso 5: Configurando Cloudflare Pages
@@ -583,7 +584,7 @@ En la pantalla de configuración de build, usa estos ajustes:
 
 - **Framework preset**: Next.js
 - **Build command**: `npm run pages:build`
-- **Build output directory**: `.open-next/static` (o `.open-next` según la configuración)
+- **Build output directory**: `.open-next/assets` (o `.open-next` según la configuración)
 - **Root directory**: `/` (raíz del proyecto)
 
 ### Variables de Entorno (Opcional)
