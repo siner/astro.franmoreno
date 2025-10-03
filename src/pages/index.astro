@@ -5,6 +5,7 @@ import Post from '../components/post.astro'
 import Stack from '../components/stack.astro'
 import HeroSection from '../components/HeroSection.astro'
 import CalendarScript from '../components/CalendarScript.astro'
+import { Image } from 'astro:assets'
 
 import { getCollection } from 'astro:content'
 import { getFeaturedProducts } from '../data/products'
@@ -252,11 +253,16 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
 
                   <div class="relative">
                     <div class="aspect-[4/3] w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-700">
-                      <img
+                      <Image
                         src={product.image}
                         alt={product.title}
                         class="h-full w-full object-cover object-center"
                         loading="lazy"
+                        format="webp"
+                        quality={85}
+                        width={400}
+                        height={300}
+                        densities={[1, 2]}
                       />
                     </div>
                   </div>

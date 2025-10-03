@@ -61,7 +61,9 @@ const { class: className } = Astro.props
                 <a
                   href="https://www.sozpic.com"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors"
+                  aria-label="Visitar Sozpic (se abre en nueva ventana)"
                 >
                   Cofundador de Sozpic
                 </a>
@@ -91,7 +93,9 @@ const { class: className } = Astro.props
                 <a
                   href="https://www.mineryreport.com"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors"
+                  aria-label="Visitar Minery Report (se abre en nueva ventana)"
                 >
                   Senior React Developer en Minery Report
                 </a>
@@ -121,7 +125,9 @@ const { class: className } = Astro.props
                 <a
                   href="https://www.necesitounarma.com"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors"
+                  aria-label="Visitar Necesito un Arma (se abre en nueva ventana)"
                 >
                   Podcaster en Necesito un Arma
                 </a>
@@ -134,12 +140,14 @@ const { class: className } = Astro.props
             <a
               href="mailto:fran@franmoreno.com"
               class="rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm bg-indigo-600 hover:bg-indigo-500 dark:bg-indigo-500 dark:hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors"
+              aria-label="Enviar email a fran@franmoreno.com"
             >
               Contactar
             </a>
             <a
               href="/blog"
               class="text-sm font-semibold leading-6 text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
+              aria-label="Ir al blog"
             >
               Ver blog <span aria-hidden="true">→</span>
             </a>

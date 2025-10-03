@@ -22,8 +22,10 @@ import '../styles/globals.css'
 <html lang="es" transition:animate="none">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://umami.franmoreno.com" />
+    <link rel="dns-prefetch" href="https://umami.franmoreno.com" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
@@ -56,7 +58,7 @@ import '../styles/globals.css'
     <meta name="twitter:image" content={socialImage} />
 
     <script
-      defer
+      async
       src="https://umami.franmoreno.com/script.js"
       data-website-id="c3fe7795-f77a-4e15-a054-32e7394ecce3"></script>
     <ViewTransitions />
@@ -79,25 +81,15 @@ import '../styles/globals.css'
       <Footer />
     </div>
     <script is:inline>
-      const theme = (() => {
-        if (
-          typeof localStorage !== 'undefined' &&
-          localStorage.getItem('theme')
-        ) {
-          return localStorage.getItem('theme')
-        }
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          return 'dark'
-        }
-        return 'light'
-      })()
-
-      if (theme === 'light') {
-        document.documentElement.classList.remove('dark')
-      } else {
-        document.documentElement.classList.add('dark')
-      }
-      window.localStorage.setItem('theme', theme)
+      try {
+        const theme =
+          localStorage.getItem('theme') ||
+          (matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light')
+        document.documentElement.classList.toggle('dark', theme === 'dark')
+        localStorage.setItem('theme', theme)
+      } catch (e) {}
     </script>
   </body>
 </html>

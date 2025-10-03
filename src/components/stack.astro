@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets'
+
 const technologies = {
   frontend: [
     { name: 'react', label: 'React' },
@@ -55,12 +57,14 @@ const categories = {
           {techs.map((tech) => (
             <div class="group flex flex-col items-center gap-2">
               <div class="relative flex items-center justify-center w-16 h-16 rounded-xl bg-white dark:bg-gray-800/60 shadow-sm ring-1 ring-gray-900/5 dark:ring-gray-700/50 transition-all duration-200 group-hover:shadow-md dark:group-hover:shadow-indigo-500/10 group-hover:-translate-y-1 dark:group-hover:bg-gray-800">
-                <img
+                <Image
                   src={'/svg/' + tech.name + '.svg'}
                   class="w-10 h-10 transition-transform duration-200 group-hover:scale-110"
-                  width="40"
-                  height="40"
+                  width={40}
+                  height={40}
                   alt={tech.label}
+                  loading="lazy"
+                  format="svg"
                 />
               </div>
               <span class="text-sm text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">

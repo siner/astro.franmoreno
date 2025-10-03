@@ -45,6 +45,7 @@ export default function MobileMenu() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
+          aria-hidden="true"
         >
           <path
             strokeLinecap="round"
@@ -64,6 +65,7 @@ export default function MobileMenu() {
               type="button"
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
               onClick={() => setIsOpen(false)}
+              aria-label="Cerrar menú"
             >
               <svg
                 className="h-6 w-6"
@@ -71,6 +73,7 @@ export default function MobileMenu() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
