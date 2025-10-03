@@ -425,11 +425,6 @@ Crea o modifica `next.config.js` en la raíz del proyecto:
 ```js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configuración para Cloudflare Pages
-  experimental: {
-    runtime: 'nodejs'
-  },
-
   // Optimizaciones para Cloudflare
   images: {
     unoptimized: true // Cloudflare optimiza las imágenes por defecto
@@ -489,9 +484,6 @@ import { defineCloudflareConfig } from '@opennextjs/cloudflare'
 
 export default defineCloudflareConfig({
   // Configuraciones específicas para tu proyecto
-  experimental: {
-    // Habilitar características experimentales si es necesario
-  }
 })
 ```
 
@@ -736,8 +728,6 @@ async headers() {
 1. **Compatibilidad con Windows**: Actualmente, `@opennextjs/cloudflare` no es totalmente compatible con Windows. Se espera compatibilidad completa en la versión 1.0.
 
 2. **Runtime de Edge**: El adaptador actualmente solo soporta el runtime de Node.js de Next.js. El soporte para Edge Runtime está planificado para la próxima versión principal.
-
-3. **Características Experimentales**: Algunas características experimentales de Next.js como `use cache` aún no están soportadas pero se añadirán en futuras versiones.
 
 ### Workers Runtime Limitations
 
