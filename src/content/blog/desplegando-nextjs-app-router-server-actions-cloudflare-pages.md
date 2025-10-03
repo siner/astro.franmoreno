@@ -24,6 +24,8 @@ Hasta hace poco, desplegar aplicaciones Next.js con estas características moder
 
 En este tutorial te muestro paso a paso cómo desplegar una aplicación Next.js completa con App Router y Server Actions en Cloudflare Pages, aprovechando al máximo la infraestructura global de Cloudflare.
 
+> **💡 Repositorio Demo**: Puedes acceder al código completo de este tutorial en GitHub: [nextjs-cloudflare-demo](https://github.com/siner/nextjs-cloudflare-demo). El repositorio incluye toda la configuración y código necesario para seguir el tutorial.
+
 ## ¿Por qué Cloudflare Pages para Next.js?
 
 Antes de saltar al tutorial, déjame explicarte por qué considero que Cloudflare Pages es una excelente opción para alojar aplicaciones Next.js en 2025:
@@ -49,6 +51,20 @@ Para seguir este tutorial, necesitarás:
 - Familiaridad con el App Router de Next.js
 
 ## Paso 1: Creando la Aplicación Next.js de Ejemplo
+
+Tienes dos opciones para seguir este tutorial:
+
+### Opción A: Clonar el Repositorio Demo (Recomendado)
+
+Si quieres empezar directamente con el código completo:
+
+```bash
+git clone https://github.com/siner/nextjs-cloudflare-demo.git
+cd nextjs-cloudflare-demo
+npm install
+```
+
+### Opción B: Crear la Aplicación desde Cero
 
 Vamos a crear una aplicación Next.js desde cero que incluya tanto el App Router como Server Actions. Esta será nuestra aplicación de prueba.
 
@@ -755,6 +771,17 @@ La combinación de la red global de Cloudflare, las funciones serverless integra
 - Implementa autenticación con [Better Auth](https://better-auth.com/)
 - Agrega análisis con [Cloudflare Analytics](https://www.cloudflare.com/web-analytics/)
 - Explora [Cloudflare Workers](https://workers.cloudflare.com/) para lógica adicional
+
+### Código Completo
+
+Recuerda que puedes acceder al código completo de este tutorial en el repositorio de GitHub: [nextjs-cloudflare-demo](https://github.com/siner/nextjs-cloudflare-demo). Incluye:
+
+- ✅ Configuración completa de OpenNext para Cloudflare
+- ✅ Aplicación Next.js con App Router y Server Actions
+- ✅ Formulario de contacto funcional con validación
+- ✅ Componentes con manejo de estado y loading
+- ✅ Configuración de despliegue optimizada
+- ✅ Ejemplos de uso de Suspense y async components
 
 ¿Has probado Next.js en Cloudflare Pages? ¿Qué tal ha sido tu experiencia? ¡Me encantaría conocer tus casos de uso y cualquier truco adicional que hayas descubierto!
 
