@@ -21,6 +21,8 @@
 - [x] **Documentar Gestión de Productos:** Crear documentación para añadir nuevos productos
 - [x] **Crear Artículo Kit GTD:** Nuevo artículo promocionando el kit de organización semanal
 - [x] **Configurar Node.js para Cloudflare:** Solucionar problema de versión de Node.js en despliegue
+- [x] **Migrar CV a Astro:** Migrar CV desde repositorio NextJS independiente a /cv en esta web
+- [x] **Mejorar Estilos de Impresión CV:** Optimizar estilos @media print para generar PDFs profesionales
 
 ## En Progreso
 

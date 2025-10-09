@@ -6,7 +6,7 @@ const navLinks = [
   { href: '/blog', text: 'Blog' },
   { href: '/productos', text: 'Productos' },
   { href: '/servicios', text: 'Servicios' },
-  { href: 'https://cv.franmoreno.com', text: 'CV' }
+  { href: '/cv', text: 'CV' }
 ]
 
 export default function MobileMenu() {
