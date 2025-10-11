@@ -21,7 +21,7 @@
     "@astrojs/tailwind": "^6.0.2",
     "@tailwindcss/typography": "^0.5.16",
     "astro": "^5.14.1",
-    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-hooks": "^7.0.0",
     "prettier-plugin-astro": "^0.14.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
