@@ -51,7 +51,7 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
               .slice(0, 2)
               .map((post) => (
                 <Post
-                  url={'/blog/' + post.slug}
+                  url={'/blog/' + post.id.replace(/\.md$/, '')}
                   heroImage={post.data.heroImage}
                   heroAlt={post.data.altImage}
                   title={post.data.title}
@@ -126,21 +126,6 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
             >
               NextJS
             </a>
-          </p>
-        </Project>
-
-        <Project
-          title="Blocks - Generador HTML"
-          url="https://blocks.franmoreno.com"
-        >
-          <p>
-            Herramienta que utiliza IA para generar bloques HTML con <a
-              class="font-bold hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
-              href="https://tailwindcss.com"
-              target="_blank"
-            >
-              Tailwind CSS
-            </a>. Describe lo que necesitas y obtén código listo para usar.
           </p>
         </Project>
       </div>

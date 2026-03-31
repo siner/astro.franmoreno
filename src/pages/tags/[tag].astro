@@ -69,7 +69,7 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
       {
         posts.map((post) => (
           <Post
-            url={`/blog/${post.slug}`}
+            url={`/blog/${post.id.replace(/\.md$/, '')}`}
             heroImage={post.data.heroImage}
             heroAlt={post.data.altImage}
             title={post.data.title}

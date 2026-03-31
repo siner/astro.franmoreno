@@ -1,8 +1,8 @@
-// 1. Import utilities from `astro:content`
 import { defineCollection, z } from 'astro:content'
+import { glob } from 'astro/loaders'
 
 const blogCollection = defineCollection({
-  type: 'content', // v2.5.0 and later
+  loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),

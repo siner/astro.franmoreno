@@ -13,7 +13,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
-import { ViewTransitions } from 'astro:transitions'
+import { ClientRouter } from 'astro:transitions'
 
 import '../styles/globals.css'
 ---
@@ -61,7 +61,7 @@ import '../styles/globals.css'
       async
       src="https://umami.franmoreno.com/script.js"
       data-website-id="c3fe7795-f77a-4e15-a054-32e7394ecce3"></script>
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body
     class="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-[#333333] dark:to-[#222222] dark:text-[#f5f5f5] transition-colors duration-300"

@@ -7,7 +7,7 @@ import { getCollection } from 'astro:content'
 
 const posts = await getCollection('blog')
 
-posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date))
+posts.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate))
 
 export const GET = () =>
   rss({
@@ -15,10 +15,10 @@ export const GET = () =>
     description: 'El Blog de Fran Moreno',
     site: 'https://franmoreno.com',
     items: posts.map((post) => ({
-      link: '/blog/' + post.slug,
+      link: '/blog/' + post.id.replace(/\.md$/, ''),
       title: post.data.title,
       pubDate: post.data.pubDate,
-      content: sanitizeHtml(parser.render(post.body), {
+      content: sanitizeHtml(parser.render(post.body ?? ''), {
         allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img'])
       })
     })),

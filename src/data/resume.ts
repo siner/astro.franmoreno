@@ -48,7 +48,7 @@ export const RESUME_DATA = {
       badges: ['Remote', 'React', 'TypeScript'],
       title: 'Senior React Developer',
       start: '2024',
-      end: '',
+      end: '2026',
       description:
         'Desarrollador React Senior en Minery Report. Lidero y participo en el desarrollo de proyectos Next.js tanto de forma individual como en equipo, abarcando desde la creación de nuevas aplicaciones hasta el mantenimiento de proyectos existentes, incluyendo tareas de backend cuando es necesario. Trabajo principalmente con React, TypeScript, Next.js, Tailwind CSS, Vercel y GIT, con un enfoque especial en el desarrollo frontend.'
     },
@@ -151,21 +151,6 @@ export const RESUME_DATA = {
       link: {
         label: '4500.lu',
         href: 'https://4500.lu/'
-      }
-    },
-    {
-      title: 'Blocks - Generador HTML',
-      techStack: [
-        'React',
-        'Tailwind CSS',
-        'Cloudflare Workers',
-        'Next.js',
-        'AI'
-      ],
-      description: 'Generador de HTML',
-      link: {
-        label: 'blocks.franmoreno.com',
-        href: 'https://blocks.franmoreno.com/'
       }
     },
     {
