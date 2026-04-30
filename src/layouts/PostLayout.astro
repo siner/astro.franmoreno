@@ -1,6 +1,7 @@
 ---
 import Layout from './Layout.astro'
 import Comments from '../components/Comments.astro'
+import Breadcrumbs from '../components/Breadcrumbs.astro'
 
 import '../styles/globals.css'
 
@@ -36,6 +37,13 @@ const dateFormatter = new Intl.DateTimeFormat('es-ES', {
 >
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <article class="mx-auto max-w-3xl py-8 sm:py-16">
+      <Breadcrumbs
+        items={[
+          { name: 'Inicio', url: '/' },
+          { name: 'Blog', url: '/blog' },
+          { name: title }
+        ]}
+      />
       <header class="mb-8 sm:mb-12">
         {
           heroImage && (

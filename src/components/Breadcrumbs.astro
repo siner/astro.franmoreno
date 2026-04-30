@@ -1,0 +1,62 @@
+---
+export interface BreadcrumbItem {
+  name: string
+  url?: string
+}
+
+const { items } = Astro.props as { items: BreadcrumbItem[] }
+
+const siteOrigin = new URL('/', Astro.site).toString().replace(/\/$/, '')
+
+const itemListElement = items.map((item, idx) => ({
+  '@type': 'ListItem',
+  position: idx + 1,
+  name: item.name,
+  ...(item.url ? { item: new URL(item.url, Astro.site).toString() } : {})
+}))
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement
+}
+---
+
+<nav aria-label="Breadcrumb" class="mb-6">
+  <ol
+    class="flex flex-wrap items-center gap-2 text-sm text-gray-600 dark:text-gray-400"
+  >
+    {
+      items.map((item, idx) => (
+        <li class="flex items-center gap-2">
+          {idx > 0 && (
+            <span aria-hidden="true" class="text-gray-400 dark:text-gray-600">
+              /
+            </span>
+          )}
+          {item.url && idx < items.length - 1 ? (
+            <a
+              href={item.url}
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
+            >
+              {item.name}
+            </a>
+          ) : (
+            <span
+              class="text-gray-900 dark:text-gray-200 font-medium"
+              aria-current={idx === items.length - 1 ? 'page' : undefined}
+            >
+              {item.name}
+            </span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+
+<script
+  type="application/ld+json"
+  is:inline
+  set:html={JSON.stringify(jsonLd)}
+/>

@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content'
 import Layout from '../../layouts/Layout.astro'
 import Post from '../../components/post.astro'
+import Breadcrumbs from '../../components/Breadcrumbs.astro'
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog')
@@ -44,11 +45,13 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
 
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:max-w-none">
-        <p
-          class="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400 mb-2"
-        >
-          Blog / Etiqueta
-        </p>
+        <Breadcrumbs
+          items={[
+            { name: 'Inicio', url: '/' },
+            { name: 'Blog', url: '/blog' },
+            { name: tag }
+          ]}
+        />
         <h1
           class="text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 dark:from-white dark:via-gray-200 dark:to-gray-300 bg-clip-text text-transparent"
         >
