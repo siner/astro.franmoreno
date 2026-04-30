@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Button from '../components/elements/button.astro'
+import { Image } from 'astro:assets'
+import notFoundImage from '../assets/notfound.jpg'
 ---
 
 <Layout
@@ -10,7 +12,15 @@ import Button from '../components/elements/button.astro'
   <div class="md:flex items-center container mx-auto gap-10">
     <div class="md:w-1/2 mx-auto mt-10 justify-center text-center text-lg">
       <h1 class="text-4xl font-bold mb-5">Página no encontrada</h1>
-      <img src="/notfound.jpg" alt="Not Found" />
+      <Image
+        src={notFoundImage}
+        alt="Página no encontrada"
+        widths={[480, 800, 1200]}
+        sizes="(max-width: 768px) 100vw, 600px"
+        format="webp"
+        quality={80}
+        loading="eager"
+      />
 
       <div class="flex mt-4 justify-center">
         <a

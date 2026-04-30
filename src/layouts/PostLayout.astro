@@ -42,7 +42,12 @@ const dateFormatter = new Intl.DateTimeFormat('es-ES', {
             <div class="relative aspect-[2/1] mb-8 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 ring-1 ring-gray-900/5 dark:ring-gray-100/10">
               <img
                 src={heroImage}
-                alt={heroAlt}
+                alt={heroAlt ?? title}
+                width="1200"
+                height="600"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
                 class="absolute inset-0 h-full w-full object-cover"
               />
             </div>
