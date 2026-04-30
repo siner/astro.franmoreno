@@ -1,15 +1,100 @@
 ---
-const { title, description, image, type } = Astro.props
+const {
+  title,
+  description,
+  image,
+  type,
+  pubDate,
+  modDate,
+  author = 'Fran Moreno',
+  tags
+} = Astro.props
 
-// Configurar la imagen por defecto y la URL del sitio
 const defaultImage = '/franmoreno.jpg'
-const siteUrl = 'https://franmoreno.com'
 
-// Determinar la imagen a usar
 const socialImage = image
   ? new URL(image, Astro.site)
   : new URL(defaultImage, Astro.site)
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+const siteOrigin = new URL('/', Astro.site).toString().replace(/\/$/, '')
+
+const isArticle = type === 'blog'
+
+const personSchema = {
+  '@type': 'Person',
+  '@id': `${siteOrigin}/#person`,
+  name: 'Fran Moreno',
+  alternateName: 'siner',
+  url: `${siteOrigin}/`,
+  image: `${siteOrigin}/franmoreno.jpg`,
+  jobTitle: 'Desarrollador Web Frontend',
+  description:
+    'Ingeniero informático con más de 15 años de experiencia desarrollando aplicaciones web con React, Next.js y Astro.',
+  email: 'mailto:fran@franmoreno.com',
+  knowsAbout: [
+    'React',
+    'Next.js',
+    'Astro',
+    'TypeScript',
+    'JavaScript',
+    'Tailwind CSS',
+    'Cloudflare',
+    'Desarrollo Web Frontend'
+  ],
+  sameAs: [
+    'https://twitter.com/siner',
+    'https://github.com/siner',
+    'https://www.linkedin.com/in/franmorenonavas/',
+    'https://bsky.app/profile/franmoreno.com',
+    'https://instagram.com/fransiner'
+  ]
+}
+
+const websiteSchema = {
+  '@type': 'WebSite',
+  '@id': `${siteOrigin}/#website`,
+  url: `${siteOrigin}/`,
+  name: 'Fran Moreno',
+  description: 'Web personal y blog de Fran Moreno, desarrollador web frontend.',
+  inLanguage: 'es-ES',
+  publisher: { '@id': `${siteOrigin}/#person` },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${siteOrigin}/blog?q={search_term_string}`
+    },
+    'query-input': 'required name=search_term_string'
+  }
+}
+
+const articleSchema = isArticle
+  ? {
+      '@type': 'BlogPosting',
+      '@id': `${canonicalURL}#article`,
+      headline: title,
+      description,
+      image: socialImage.toString(),
+      datePublished: pubDate
+        ? new Date(pubDate).toISOString()
+        : undefined,
+      dateModified: modDate
+        ? new Date(modDate).toISOString()
+        : pubDate
+          ? new Date(pubDate).toISOString()
+          : undefined,
+      author: { '@id': `${siteOrigin}/#person` },
+      publisher: { '@id': `${siteOrigin}/#person` },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalURL.toString() },
+      inLanguage: 'es-ES',
+      keywords: tags && tags.length ? tags.join(', ') : undefined
+    }
+  : null
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [personSchema, websiteSchema, ...(articleSchema ? [articleSchema] : [])]
+}
 
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
@@ -56,6 +141,12 @@ import '../styles/globals.css'
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
+
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(jsonLd)}
+    />
 
     <script
       async

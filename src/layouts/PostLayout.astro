@@ -4,7 +4,16 @@ import Comments from '../components/Comments.astro'
 
 import '../styles/globals.css'
 
-const { title, description, pubDate, heroImage, heroAlt, tags } = Astro.props
+const {
+  title,
+  description,
+  pubDate,
+  modDate,
+  heroImage,
+  heroAlt,
+  tags,
+  author
+} = Astro.props
 const date = new Date(pubDate)
 
 // Formato de fecha en español
@@ -15,7 +24,16 @@ const dateFormatter = new Intl.DateTimeFormat('es-ES', {
 })
 ---
 
-<Layout title={title} description={description} image={heroImage} type="blog">
+<Layout
+  title={title}
+  description={description}
+  image={heroImage}
+  type="blog"
+  pubDate={pubDate}
+  modDate={modDate}
+  author={author}
+  tags={tags}
+>
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <article class="mx-auto max-w-3xl py-8 sm:py-16">
       <header class="mb-8 sm:mb-12">
