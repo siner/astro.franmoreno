@@ -44,3 +44,5 @@ Cloudflare Pages ofrece un plan gratuito generoso que incluye un alto límite de
 ## Desventajas
 
 Obviamente, no todo puede ser perfecto, sobre todo si trabajamos con [NextJS](https://nextjs.org/), Vercel ofrece mucho mejor soporte para este Framework (lo han desarrollado ellos...) por lo que algunas de las ventajas y novedades que ofrecen no estarán disponibles cuando despliegas un proyecto con Cloudflare Pages, pero para la mayoría de proyectos es una solución más que interesante.
+
+> **🚀 ¿Migrando un Next.js a Cloudflare?** La parte que más fricción me dio al mover proyectos fue la configuración inicial: `@opennextjs/cloudflare`, autenticación, base de datos y CI/CD. He empaquetado todo eso en el [**Next.js + Cloudflare Pages Starter Kit**](https://fransiner.gumroad.com/l/nextjs-cloudflare-starter-auth-database-edge-deploy) — Better Auth, Drizzle + Supabase, GitHub Actions y deploy automático. De cero a desplegado en ~30 minutos.

@@ -26,6 +26,8 @@ En este tutorial te muestro paso a paso cómo desplegar una aplicación Next.js 
 
 > **💡 Repositorio Demo**: Puedes acceder al código completo de este tutorial en GitHub: [nextjs-cloudflare-demo](https://github.com/siner/nextjs-cloudflare-demo). El repositorio incluye toda la configuración y código necesario para seguir el tutorial.
 
+> **🚀 ¿Quieres saltarte la configuración?** Si prefieres empezar directamente con un proyecto listo para producción —con autenticación (Better Auth), base de datos (Drizzle + Supabase), CI/CD con GitHub Actions y deploy automático en Cloudflare Pages— echa un vistazo al [**Next.js + Cloudflare Pages Starter Kit**](/productos/#productos). De cero a desplegado en ~30 minutos.
+
 ## ¿Por qué Cloudflare Pages para Next.js?
 
 Antes de saltar al tutorial, déjame explicarte por qué considero que Cloudflare Pages es una excelente opción para alojar aplicaciones Next.js en 2025:
@@ -772,6 +774,18 @@ Recuerda que puedes acceder al código completo de este tutorial en el repositor
 - ✅ Componentes con manejo de estado y loading
 - ✅ Configuración de despliegue optimizada
 - ✅ Ejemplos de uso de Suspense y async components
+
+### ¿Quieres ir un paso más allá?
+
+Si este tutorial te ha servido y necesitas un punto de partida más completo —con autenticación, base de datos y CI/CD ya integrados— he empaquetado todo lo que aprendí desplegando proyectos reales en el [**Next.js + Cloudflare Pages Starter Kit**](https://fransiner.gumroad.com/l/nextjs-cloudflare-starter-auth-database-edge-deploy):
+
+- 🔐 Better Auth con email/password y Google OAuth
+- 🗄️ Drizzle ORM + Supabase con esquema listo
+- 🚀 CI/CD con GitHub Actions y deploy automático
+- 🎨 Dashboard, sidebar y formularios listos con Tailwind
+- 🛡️ Security headers configurados por defecto
+
+[Ver el starter en Gumroad →](https://fransiner.gumroad.com/l/nextjs-cloudflare-starter-auth-database-edge-deploy)
 
 ¿Has probado Next.js en Cloudflare Pages? ¿Qué tal ha sido tu experiencia? ¡Me encantaría conocer tus casos de uso y cualquier truco adicional que hayas descubierto!
 

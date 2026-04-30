@@ -154,4 +154,6 @@ Si te lo planteas como un sustituto, sales decepcionado. Si te lo planteas como 
 
 En mi caso, llevar tareas auxiliares a Workers AI y reservar Anthropic para lo que de verdad lo necesita ha bajado el coste de mis side projects significativamente sin sacrificar calidad donde importa. Y, para mantener todo el stack en un mismo proveedor, encaja con la dirección que llevo tiempo siguiendo de [moverlo todo a Cloudflare](/blog/moviendo-mis-side-projects-a-cloudflare/).
 
+> **🚀 ¿Empezando un proyecto en Cloudflare?** Si quieres saltarte la parte de fontanería (auth, base de datos, CI/CD) y centrarte en construir tu producto sobre Workers/Pages, el [**Next.js + Cloudflare Pages Starter Kit**](https://fransiner.gumroad.com/l/nextjs-cloudflare-starter-auth-database-edge-deploy) trae Better Auth, Drizzle + Supabase y deploy automático listos. La base perfecta para sumarle Workers AI por encima.
+
 ¿Estás usando Workers AI en algún proyecto? ¿Lo combinas con OpenAI o Anthropic? Me interesa especialmente cómo estás enrutando entre proveedores y si has dado con algún patrón que te esté funcionando. Cuéntame.

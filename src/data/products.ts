@@ -16,6 +16,32 @@ export interface Product {
 
 export const products: Product[] = [
   {
+    id: 'nextjs-cloudflare-starter',
+    title: 'Next.js + Cloudflare Pages Starter Kit',
+    description:
+      'Starter kit full-stack para lanzar aplicaciones Next.js 15 en el edge de Cloudflare con autenticación, base de datos y CI/CD listos para producción.',
+    price: '€59',
+    originalPrice: null,
+    image: '/productos/nextjs-cloudflare-starter.jpg',
+    features: [
+      'Next.js 15 con App Router y Server Actions',
+      'Deploy en Cloudflare Pages con @opennextjs/cloudflare',
+      'Better Auth: email/password, Google OAuth y reset',
+      'Drizzle ORM + Supabase (PostgreSQL) con esquema listo',
+      'UI lista: dashboard, sidebar, formularios y toasts (Tailwind)',
+      'CI/CD con GitHub Actions (push a main → deploy)',
+      'Security headers preconfigurados',
+      'README paso a paso: de cero a desplegado en ~30 minutos'
+    ],
+    tags: ['Next.js', 'Cloudflare', 'Auth', 'Drizzle'],
+    downloadSize: 'ZIP + repo',
+    gumroadUrl:
+      'https://fransiner.gumroad.com/l/nextjs-cloudflare-starter-auth-database-edge-deploy',
+    featured: true,
+    category: 'Desarrollo',
+    launchDate: new Date('2026-04-30')
+  },
+  {
     id: 'revision-pro-gtd-kit',
     title: 'Revision Pro GTD Kit',
     description:
@@ -36,11 +62,10 @@ export const products: Product[] = [
     tags: ['Productividad', 'GTD', 'Notion', 'Todoist'],
     downloadSize: '13 MB',
     gumroadUrl: 'https://fransiner.gumroad.com/l/revision-pro-gtd-kit',
-    featured: true,
+    featured: false,
     category: 'Productividad',
     launchDate: new Date('2024-12-01')
-  },
-  // Aquí se pueden añadir más productos en el futuro
+  }
 ]
 
 // Funciones de utilidad para trabajar con productos
