@@ -20,20 +20,37 @@ const { class: className } = Astro.props
       <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <!-- Contenido principal -->
         <div class="max-w-2xl">
-          <h1
-            class="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 dark:from-gray-100 dark:via-gray-200 dark:to-gray-300 bg-clip-text text-transparent mb-8"
+          <p
+            class="text-lg font-medium text-indigo-600 dark:text-indigo-300 mb-3"
           >
-            ¡Hola! 👋🏽 <br />
-            Soy Fran Moreno
+            ¡Hola! 👋🏽 Soy
+          </p>
+          <h1
+            class="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 dark:from-gray-100 dark:via-gray-200 dark:to-gray-300 bg-clip-text text-transparent mb-6"
+          >
+            Fran Moreno
           </h1>
-          <p class="mt-6 text-lg leading-8 text-gray-800 dark:text-gray-300">
-            Ingeniero informático con más de 15 años de experiencia como <strong
-              class="font-semibold text-indigo-600 dark:text-indigo-300"
-              >Desarrollador Web</strong
-            >. Actualmente centrado en el desarrollo Frontend con <strong
+          <p
+            class="text-xl sm:text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-6"
+          >
+            Desarrollador Web Frontend — React, Next.js y Astro
+          </p>
+          <p class="mt-4 text-lg leading-8 text-gray-800 dark:text-gray-300">
+            Ingeniero informático con más de 15 años de experiencia
+            desarrollando aplicaciones web. Actualmente centrado en el desarrollo
+            Frontend con <strong
               class="font-semibold text-indigo-600 dark:text-indigo-300"
               >React</strong
-            > (Astro y NextJS).
+            > (<strong
+              class="font-semibold text-indigo-600 dark:text-indigo-300"
+              >Astro</strong
+            > y <strong
+              class="font-semibold text-indigo-600 dark:text-indigo-300"
+              >Next.js</strong
+            >) y el ecosistema <strong
+              class="font-semibold text-indigo-600 dark:text-indigo-300"
+              >Cloudflare</strong
+            >.
           </p>
 
           <!-- Lista de roles -->
@@ -147,7 +164,7 @@ const { class: className } = Astro.props
         </div>
 
         <!-- Imagen decorativa -->
-        <div class="relative block">
+        <div class="relative block" aria-hidden="true">
           <div class="absolute -inset-4">
             <div
               class="w-full h-full mx-auto rotate-[-4deg] rounded-3xl bg-gradient-to-r from-indigo-600/50 to-amber-600/50 opacity-30 blur-3xl"
