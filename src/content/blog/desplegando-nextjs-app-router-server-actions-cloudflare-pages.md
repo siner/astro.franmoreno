@@ -18,6 +18,9 @@ tags:
 draft: false
 ---
 
+
+> **⚠️ Actualización (julio 2026):** Este tutorial se escribió cuando el flujo recomendado para Next.js era Cloudflare **Pages** con `next-on-pages`. Desde entonces, Cloudflare recomienda desplegar sobre **Workers** con Static Assets usando el adaptador de OpenNext (`@opennextjs/cloudflare`). Los conceptos de este post siguen siendo válidos, pero para un proyecto nuevo te recomiendo empezar por Workers. Lo explico en detalle, junto con los límites reales que me he encontrado en producción, en [OpenNext en Cloudflare: los límites reales que me he encontrado (Parte 1)](/blog/opennext-cloudflare-limites-reales-parte-1/).
+
 Si has seguido la evolución de [Next.js](https://nextjs.org/) y has experimentado con el nuevo [App Router](https://nextjs.org/docs/app), seguramente te has topado con las [Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations). Son una característica potente que permite ejecutar código del servidor directamente desde componentes cliente, simplificando enormemente el manejo de formularios y mutaciones de datos.
 
 Hasta hace poco, desplegar aplicaciones Next.js con estas características modernas en [Cloudflare Pages](https://pages.cloudflare.com/) era complicado o directamente imposible. Sin embargo, con las últimas mejoras en el soporte de Cloudflare para Next.js y las funciones serverless, ahora es posible y sorprendentemente sencillo.
@@ -27,6 +30,8 @@ En este tutorial te muestro paso a paso cómo desplegar una aplicación Next.js 
 > **💡 Repositorio Demo**: Puedes acceder al código completo de este tutorial en GitHub: [nextjs-cloudflare-demo](https://github.com/siner/nextjs-cloudflare-demo). El repositorio incluye toda la configuración y código necesario para seguir el tutorial.
 
 > **🚀 ¿Quieres saltarte la configuración?** Si prefieres empezar directamente con un proyecto listo para producción —con autenticación (Better Auth), base de datos (Drizzle + Supabase), CI/CD con GitHub Actions y deploy automático en Cloudflare Pages— echa un vistazo al [**Next.js + Cloudflare Pages Starter Kit**](/productos/#productos). De cero a desplegado en ~30 minutos.
+
+
 
 ## ¿Por qué Cloudflare Pages para Next.js?
 
@@ -727,15 +732,13 @@ async headers() {
 
 ### Compatibilidad del Adaptador OpenNext
 
-1. **Compatibilidad con Windows**: Actualmente, `@opennextjs/cloudflare` no es totalmente compatible con Windows. Se espera compatibilidad completa en la versión 1.0.
-
-2. **Runtime de Edge**: El adaptador actualmente solo soporta el runtime de Node.js de Next.js. El soporte para Edge Runtime está planificado para la próxima versión principal.
+El adaptador solo soporta el runtime Node.js de Next.js, que es precisamente el enfoque recomendado; el runtime Edge no está soportado.
 
 ### Workers Runtime Limitations
 
-1. **CPU Time**: Límite de 30 segundos por request en plan gratuito
-2. **Memory**: Límite de memoria más restrictivo que Node.js tradicional
-3. **APIs**: Algunas APIs de Node.js no están disponibles en el runtime de Workers
+1. **CPU Time**: El plan gratuito da 10 ms de CPU time por request (no tiempo total: la espera en red no cuenta); el de pago arranca en 30 s y sube hasta 5 min.
+2. **Memory**: Límite de memoria más restrictivo que Node.js tradicional.
+3. **APIs**: Algunas APIs de Node.js no están disponibles en el runtime de Workers.
 
 ### Next.js Features
 
