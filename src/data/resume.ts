@@ -43,6 +43,16 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      company: 'Knowmad Mood',
+      link: 'https://www.knowmadmood.com',
+      badges: ['Remote', 'React', 'TypeScript'],
+      title: 'Senior Frontend Developer',
+      start: '2026',
+      end: '',
+      description:
+        'Desarrollador Frontend Senior en Knowmad Mood, trabajando en remoto sobre proyectos web con React, TypeScript y Next.js. Participo en el desarrollo de aplicaciones, la definición de componentes reutilizables y las decisiones técnicas del frontend, colaborando con equipos multidisciplinares.'
+    },
+    {
       company: 'Minery Report',
       link: 'https://www.mineryreport.com',
       badges: ['Remote', 'React', 'TypeScript'],
@@ -177,8 +187,8 @@ export const RESUME_DATA = {
       techStack: ['React', 'Tailwind CSS', 'Next.js', 'Supabase'],
       description: 'Web de la empresa ResGes',
       link: {
-        label: 'resges.com',
-        href: 'https://resges.com/'
+        label: 'resges.es',
+        href: 'https://resges.es/'
       }
     }
   ]
