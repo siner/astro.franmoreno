@@ -9,11 +9,13 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "typecheck": "astro check",
     "preview": "astro preview",
     "preview-cloudflare": "wrangler pages dev ./dist",
     "astro": "astro"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.10",
     "@astrojs/mdx": "^7.0.5",
     "@astrojs/react": "^6.0.2",
     "@astrojs/sitemap": "^3.7.3",
@@ -25,7 +27,7 @@
     "prettier-plugin-astro": "^0.14.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "wrangler": "^4.78.0"
   },
   "dependencies": {

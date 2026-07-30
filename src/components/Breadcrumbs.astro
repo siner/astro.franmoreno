@@ -6,8 +6,6 @@ export interface BreadcrumbItem {
 
 const { items } = Astro.props as { items: BreadcrumbItem[] }
 
-const siteOrigin = new URL('/', Astro.site).toString().replace(/\/$/, '')
-
 const itemListElement = items.map((item, idx) => ({
   '@type': 'ListItem',
   position: idx + 1,
