@@ -17,7 +17,7 @@ export const GET: APIRoute = async () => {
 
   const body = `# Fran Moreno
 
-> Web personal y blog de Fran Moreno, ingeniero informático y desarrollador web frontend con más de 15 años de experiencia. Especializado en React, Next.js, Astro, TypeScript y el ecosistema Cloudflare. Cofundador de Sozpic y podcaster en "Necesito un Arma".
+> Web personal y blog de Fran Moreno, ingeniero informático y desarrollador web frontend con más de 15 años de experiencia. Especializado en React, Next.js, Astro, TypeScript y el ecosistema Cloudflare. Podcaster en "Necesito un Arma".
 
 Contacto: fran@franmoreno.com
 Ubicación: España
@@ -27,15 +27,15 @@ Idioma principal del contenido: español (es-ES)
 
 - Ingeniero informático.
 - Más de 15 años desarrollando aplicaciones web; foco actual: Frontend con React (Astro y Next.js).
-- Trabaja como freelance a través de su SL Origen Modular.
+- Los servicios de consultoría, desarrollo y formación se ofrecen desde Origen Modular (https://origenmodular.com), no desde esta web. franmoreno.com es su web personal: blog, proyectos y CV.
 - Stack habitual: React, Next.js, Astro, TypeScript, Tailwind CSS, Cloudflare (Pages, Workers, Workers AI, D1).
 - Otros intereses: poker (varios SaaS y herramientas del sector), productividad (GTD), formación a desarrolladores junior.
 
 ## Páginas principales
 
-- [Inicio](${SITE}/): presentación, proyectos destacados, stack y CTA de contacto.
+- [Inicio](${SITE}/): presentación, proyectos destacados, stack y contacto.
 - [Blog](${SITE}/blog): artículos sobre desarrollo web, frameworks, despliegue y experiencias.
-- [Servicios](${SITE}/servicios): servicios de desarrollo, consultoría y formación.
+- [Servicios](${SITE}/servicios): página informativa que redirige a Origen Modular, donde se ofrecen los servicios.
 - [Productos](${SITE}/productos): productos digitales (kits GTD, plantillas, etc.).
 - [CV](${SITE}/cv): trayectoria profesional.
 - [RSS](${SITE}/rss.xml): feed de artículos.
@@ -47,7 +47,8 @@ Idioma principal del contenido: español (es-ES)
 - [Mi Bankroll](https://mibankroll.com): SaaS de gestión de banca para jugadores de poker. Next.js.
 - [PokerReads](https://pokerreads.app): MicroSaaS mobile-first para tomar notas de rivales en poker en vivo, con integración de IA. Next.js + Cloudflare.
 - [ResGes](https://resges.es): SaaS de gestión de gastos y rentabilidad para hostelería, con IA. Next.js.
-- [Sozpic](https://www.sozpic.com): proyecto del que es cofundador.
+- [Origen Modular](https://origenmodular.com): su empresa de consultoría y desarrollo web.
+- [Sozpic](https://www.sozpic.com): empresa de desarrollo web que cofundó (2011-2021).
 
 ## Artículos del blog
 
