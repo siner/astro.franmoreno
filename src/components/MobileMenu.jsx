@@ -55,7 +55,7 @@ export default function MobileMenu() {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 z-[9999] bg-white dark:bg-gray-800 p-6 h-screen">
+        <div className="fixed inset-0 z-9999 bg-white dark:bg-gray-800 p-6 h-screen">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
               Menú
