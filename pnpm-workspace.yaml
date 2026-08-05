@@ -1,0 +1,8 @@
+allowBuilds:
+  esbuild: true
+  workerd: true
+
+# miniflare fija undici@7.28.0 de forma exacta y esa version arrastra 5 avisos
+# de dependabot. Se puede quitar cuando miniflare suba a 7.29.0 o superior.
+overrides:
+  undici@>=7.0.0 <7.29.0: ^7.29.0
