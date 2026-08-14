@@ -27,6 +27,7 @@ Idioma principal del contenido: español (es-ES)
 
 - Ingeniero informático.
 - Más de 15 años desarrollando aplicaciones web; foco actual: Frontend con React (Astro y Next.js).
+- Proyecto principal actual: nib (https://mynib.dev), herramienta para convertir ideas dispersas en especificaciones (PRD.md) que ejecutan agentes de código.
 - Los servicios de consultoría, desarrollo y formación se ofrecen desde Origen Modular (https://origenmodular.com), no desde esta web. franmoreno.com es su web personal: blog, proyectos y CV.
 - Stack habitual: React, Next.js, Astro, TypeScript, Tailwind CSS, Cloudflare (Pages, Workers, Workers AI, D1).
 - Otros intereses: poker (varios SaaS y herramientas del sector), productividad (GTD), formación a desarrolladores junior.
@@ -42,10 +43,10 @@ Idioma principal del contenido: español (es-ES)
 
 ## Proyectos destacados
 
+- [nib](https://mynib.dev): su proyecto principal actual. Herramienta que convierte fotos de notas a mano, audios y textos sueltos en un PRD.md estructurado y sin ambigüedades, listo para que lo ejecuten agentes de código como Claude Code, Cursor o Codex. Flujo: intake → resumen con contradicciones señaladas → entrevista de huecos → especificación. Astro + Cloudflare.
 - [Torneos Poker Live](https://torneospokerlive.com): plataforma líder de información de torneos de poker en vivo en España. Next.js + Supabase.
-- [Reloj de Poker](https://reloj.torneospokerlive.com): reloj para organizar torneos de poker caseros. Next.js.
-- [Mi Bankroll](https://mibankroll.com): SaaS de gestión de banca para jugadores de poker. Next.js.
 - [PokerReads](https://pokerreads.app): MicroSaaS mobile-first para tomar notas de rivales en poker en vivo, con integración de IA. Next.js + Cloudflare.
+- [Mi Bankroll](https://mibankroll.com): SaaS de gestión de banca para jugadores de poker. Next.js.
 - [ResGes](https://resges.es): SaaS de gestión de gastos y rentabilidad para hostelería, con IA. Next.js.
 - [Origen Modular](https://origenmodular.com): su empresa de consultoría y desarrollo web.
 - [Sozpic](https://www.sozpic.com): empresa de desarrollo web que cofundó (2011-2021).

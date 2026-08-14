@@ -4,6 +4,7 @@ import Project from '../components/project.astro'
 import Post from '../components/post.astro'
 import Stack from '../components/stack.astro'
 import HeroSection from '../components/HeroSection.astro'
+import nibImage from '../assets/nib.webp'
 
 import { getCollection } from 'astro:content'
 
@@ -68,7 +69,41 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
         </p>
       </div>
 
-      <div class="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="mt-10">
+        <Project
+          title="nib"
+          badge="Nuevo"
+          url="https://mynib.dev"
+          image={nibImage}
+          imageAlt="nib — from napkin sketch to agent-ready spec: fotos, notas de voz y párrafos a medias se convierten en un PRD.md"
+          featured
+        >
+          <p>
+            Convierte fotos de notas a mano, audios y textos sueltos en un <strong
+              >PRD.md</strong
+            > estructurado que agentes como <span
+              class="font-bold text-indigo-600 dark:text-indigo-300"
+              >Claude Code</span
+            >, Cursor o Codex pueden ejecutar sin ambigüedades. Lee la idea, la
+            devuelve resumida señalando contradicciones, pregunta lo que falta y
+            genera la especificación. Desarrollado con <a
+              class="font-bold hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
+              href="https://astro.build"
+              target="_blank"
+            >
+              Astro
+            </a> sobre <a
+              class="font-bold hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
+              href="https://www.cloudflare.com/"
+              target="_blank"
+            >
+              Cloudflare
+            </a>
+          </p>
+        </Project>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <Project
           title="Mi web"
           github="https://github.com/siner/astro.franmoreno"
@@ -107,56 +142,6 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
           </p>
         </Project>
 
-        <Project
-          title="Reloj de Poker"
-          github="https://github.com/siner/nextjs.pokerclock"
-          url="https://reloj.torneospokerlive.com/"
-        >
-          <p>
-            Reloj para organizar torneos de poker en casa o con amigos, te
-            permite definir la estructura de ciegas, el tiempo, los premios,
-            etc... Desarrollado usando <a
-              class="font-bold hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
-              href="https://nextjs.org/"
-              target="_blank"
-            >
-              NextJS
-            </a>
-          </p>
-        </Project>
-
-        <Project title="Mi Bankroll" url="https://mibankroll.com">
-          <p>
-            SaaS de gestión de banca para jugadores de poker. Lleva el control
-            de tus sesiones, resultados y evolución del bankroll. Desarrollado
-            con <a
-              class="font-bold hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
-              href="https://nextjs.org/"
-              target="_blank"
-            >
-              NextJS
-            </a>
-          </p>
-        </Project>
-
-        <Project title="ResGes" url="https://resges.es">
-          <p>
-            SaaS para hostelería que permite a los dueños de bares y
-            restaurantes gestionar sus finanzas, con funcionalidades integradas
-            con <span
-              class="font-bold text-indigo-600 dark:text-indigo-300"
-            >
-              IA
-            </span> para automatizar tareas. Desarrollado con <a
-              class="font-bold hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
-              href="https://nextjs.org/"
-              target="_blank"
-            >
-              NextJS
-            </a>
-          </p>
-        </Project>
-
         <Project title="PokerReads" url="https://pokerreads.app">
           <p>
             MicroSaaS mobile-first para usar en vivo mientras juegas al poker.
@@ -177,6 +162,49 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
               target="_blank"
             >
               Cloudflare
+            </a>
+          </p>
+        </Project>
+
+        <Project title="ResGes" url="https://resges.es">
+          <p>
+            SaaS para hostelería que permite a los dueños de bares y
+            restaurantes gestionar sus finanzas, con funcionalidades integradas
+            con <span class="font-bold text-indigo-600 dark:text-indigo-300">
+              IA
+            </span> para automatizar tareas. Desarrollado con <a
+              class="font-bold hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
+              href="https://nextjs.org/"
+              target="_blank"
+            >
+              NextJS
+            </a>
+          </p>
+        </Project>
+
+        <Project title="Origen Modular" url="https://origenmodular.com">
+          <p>
+            Mi empresa: desde aquí presto los trabajos de consultoría técnica,
+            desarrollo web y formación. Web desarrollada con <a
+              class="font-bold hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
+              href="https://astro.build"
+              target="_blank"
+            >
+              Astro
+            </a>
+          </p>
+        </Project>
+
+        <Project title="Mi Bankroll" url="https://mibankroll.com">
+          <p>
+            SaaS de gestión de banca para jugadores de poker. Lleva el control
+            de tus sesiones, resultados y evolución del bankroll. Desarrollado
+            con <a
+              class="font-bold hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
+              href="https://nextjs.org/"
+              target="_blank"
+            >
+              NextJS
             </a>
           </p>
         </Project>
