@@ -121,6 +121,22 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: 'nib',
+      techStack: [
+        'Side Project',
+        'TypeScript',
+        'Astro',
+        'IA',
+        'Cloudflare Workers'
+      ],
+      description:
+        'Convierte fotos de notas, audios y textos en un PRD.md estructurado listo para agentes de código (Claude Code, Cursor, Codex)',
+      link: {
+        label: 'mynib.dev',
+        href: 'https://mynib.dev/'
+      }
+    },
+    {
       title: 'Web Fran Moreno',
       techStack: ['Side Project', 'TypeScript', 'Astro', 'Tailwind CSS'],
       description: 'Mi web personal y blog',
@@ -171,15 +187,6 @@ export const RESUME_DATA = {
       link: {
         label: 'fransiner.gumroad.com/l/revision-pro-gtd-kit',
         href: 'https://fransiner.gumroad.com/l/revision-pro-gtd-kit'
-      }
-    },
-    {
-      title: 'Reloj de Poker',
-      techStack: ['React', 'Tailwind CSS', 'Next.js'],
-      description: 'Reloj de Poker',
-      link: {
-        label: 'reloj.torneospokerlive.com',
-        href: 'https://reloj.torneospokerlive.com/'
       }
     },
     {

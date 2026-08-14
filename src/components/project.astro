@@ -1,73 +1,153 @@
 ---
-const { title, url, github } = Astro.props
+import { Image } from 'astro:assets'
+
+interface Props {
+  title: string
+  url?: string
+  github?: string
+  /** Renders a wider, visually prominent card. Use for the project you want to lead with. */
+  featured?: boolean
+  /** Small pill above the title, e.g. "Nuevo". */
+  badge?: string
+  /** One-line tagline shown under the title. */
+  subtitle?: string
+  /** Preview image shown beside the text. Only rendered on featured cards. */
+  image?: ImageMetadata
+  imageAlt?: string
+}
+
+const { title, url, github, featured, badge, subtitle, image, imageAlt } =
+  Astro.props
+
+const showImage = Boolean(featured && image)
 ---
 
 <article
-  class="group relative flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-gray-800/50 shadow-md ring-1 ring-gray-900/5 transition-all duration-300 hover:shadow-xl dark:shadow-gray-800/10 h-full"
+  class:list={[
+    'group relative flex flex-col overflow-hidden rounded-2xl transition-all duration-300 h-full',
+    featured
+      ? 'bg-linear-to-br from-indigo-50 to-white dark:from-indigo-950/40 dark:to-gray-800/50 shadow-lg ring-1 ring-indigo-500/30 hover:shadow-2xl dark:shadow-indigo-900/20'
+      : 'bg-white dark:bg-gray-800/50 shadow-md ring-1 ring-gray-900/5 hover:shadow-xl dark:shadow-gray-800/10'
+  ]}
 >
-  <div class="flex flex-1 flex-col justify-between p-6">
-    <div class="flex-1">
-      <h3
-        class="text-xl font-semibold leading-tight text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors mb-4"
-      >
-        {title}
-      </h3>
-      <div
-        class="prose prose-gray dark:prose-invert prose-a:text-indigo-600 dark:prose-a:text-indigo-400 prose-a:no-underline prose-a:hover:text-indigo-500"
-      >
-        <slot />
+  <div
+    class:list={[
+      'flex flex-1',
+      showImage ? 'flex-col lg:flex-row lg:items-center' : 'flex-col'
+    ]}
+  >
+    {
+      featured && image && (
+        <div class="shrink-0 px-8 pt-8 sm:px-10 sm:pt-10 lg:order-2 lg:w-5/12 lg:pl-0 lg:py-10">
+          <Image
+            src={image}
+            width={600}
+            height={315}
+            class="w-full rounded-xl shadow-md ring-1 ring-gray-900/10 dark:ring-white/10 transition-transform duration-300 group-hover:scale-[1.02]"
+            alt={imageAlt || `Vista previa de ${title}`}
+            loading="lazy"
+            format="webp"
+            quality={85}
+            densities={[1, 2]}
+          />
+        </div>
+      )
+    }
+    <div
+      class:list={[
+        'flex flex-1 flex-col justify-between',
+        featured ? 'p-8 sm:p-10' : 'p-6',
+        showImage && 'lg:order-1'
+      ]}
+    >
+      <div class="flex-1">
+        {
+          badge && (
+            <span class="inline-flex items-center rounded-full bg-indigo-600 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white mb-4">
+              {badge}
+            </span>
+          )
+        }
+        <h3
+          class:list={[
+            'font-semibold leading-tight text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors',
+            featured ? 'text-2xl sm:text-3xl mb-2' : 'text-xl mb-4'
+          ]}
+        >
+          {title}
+        </h3>
+        {
+          subtitle && (
+            <p class="text-base font-medium text-indigo-600 dark:text-indigo-300 mb-4">
+              {subtitle}
+            </p>
+          )
+        }
+        <div
+          class:list={[
+            'prose prose-gray dark:prose-invert prose-a:text-indigo-600 dark:prose-a:text-indigo-400 prose-a:no-underline prose-a:hover:text-indigo-500',
+            featured && 'prose-lg max-w-2xl'
+          ]}
+        >
+          <slot />
+        </div>
       </div>
-    </div>
 
-    <div class="mt-6 flex gap-3">
-      {
-        url && (
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center rounded-lg bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-inset ring-gray-300 hover:bg-gray-50 dark:bg-gray-800 dark:text-white dark:ring-gray-700 dark:hover:bg-gray-700/50 transition-all duration-200"
-          >
-            <svg
-              class="w-4 h-4 mr-2"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
+      <div class="mt-6 flex gap-3">
+        {
+          url && (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class:list={[
+                'inline-flex items-center rounded-lg text-sm font-semibold transition-all duration-200',
+                featured
+                  ? 'bg-indigo-600 px-4 py-2.5 text-white shadow-xs hover:bg-indigo-500'
+                  : 'bg-white px-3 py-2 text-gray-900 shadow-xs ring-1 ring-inset ring-gray-300 hover:bg-gray-50 dark:bg-gray-800 dark:text-white dark:ring-gray-700 dark:hover:bg-gray-700/50'
+              ]}
             >
-              <path
-                fill="currentColor"
-                d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-5.344 9.257c.206.01.413.016.621.016 6.627 0 12-5.373 12-12 0-1.54-.29-3.011-.818-4.364zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728Z"
-              />
-            </svg>
-            Ver web
-          </a>
-        )
-      }
-      {
-        github && (
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center rounded-lg bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-inset ring-gray-300 hover:bg-gray-50 dark:bg-gray-800 dark:text-white dark:ring-gray-700 dark:hover:bg-gray-700/50 transition-all duration-200"
-          >
-            <svg
-              class="w-4 h-4 mr-2"
-              viewBox="0 0 64 64"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
+              <svg
+                class="w-4 h-4 mr-2"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-5.344 9.257c.206.01.413.016.621.016 6.627 0 12-5.373 12-12 0-1.54-.29-3.011-.818-4.364zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728Z"
+                />
+              </svg>
+              Ver web
+            </a>
+          )
+        }
+        {
+          github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center rounded-lg bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-inset ring-gray-300 hover:bg-gray-50 dark:bg-gray-800 dark:text-white dark:ring-gray-700 dark:hover:bg-gray-700/50 transition-all duration-200"
             >
-              <path
-                stroke-width="0"
-                fill="currentColor"
-                d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z"
-              />
-            </svg>
-            GitHub
-          </a>
-        )
-      }
+              <svg
+                class="w-4 h-4 mr-2"
+                viewBox="0 0 64 64"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-width="0"
+                  fill="currentColor"
+                  d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z"
+                />
+              </svg>
+              GitHub
+            </a>
+          )
+        }
+      </div>
     </div>
   </div>
 </article>
