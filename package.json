@@ -21,7 +21,7 @@
     "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.3.3",
-    "astro": "^7.3.2",
+    "astro": "^7.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
@@ -31,8 +31,8 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
     "markdown-it": "^15.0.3",
-    "sanitize-html": "^2.17.7",
-    "sharp": "^0.35.4",
+    "sanitize-html": "^2.18.1",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3"
   }
 }
